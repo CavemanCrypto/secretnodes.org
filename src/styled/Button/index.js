@@ -1,8 +1,9 @@
 import React from 'react'
-import styled from '@emotions/styled'
+import styled from '@emotion/styled'
 
 const ButtonPrimary = props => {
 	const Button = styled('button')`
+		font-family: inherit;
 		display: flex;
 		justify-content: center;
 		background-color: #FFF;
