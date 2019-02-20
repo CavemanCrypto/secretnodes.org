@@ -2,7 +2,7 @@
 	"scripts": {
 		"build": "next build src",
 		"export": "next export",
-		"deploy": "next build src && next export src",
+		"deploy": "next build src && next export",
 		"start": "next start src"
    },
   "dependencies": {
