@@ -36,7 +36,7 @@ const NavBar = props => {
 			letterSpacing: '.6px',
 			fontSize: '1.1rem',
 			'.menu-icon': {
-				display: 'none',	
+				display: 'none',
 			},
 			[props.mediaQueries[1]]: {
 				ul: {
@@ -59,12 +59,11 @@ const NavBar = props => {
 			<img src="/static/favicon.png" alt="" />
 			<span>secretnodes.org</span>
 		</div>
-		<img src="/static/menu-icon.svg" className="menu-icon" />	
+		<img src="/static/menu-icon.svg" className="menu-icon" />
 		<ul>
 			<Link href="#secret-nodes"><li>Secret Nodes</li></Link>
 			<Link href="#profitability-calc"><li>Profitability Calculator</li></Link>
 			<Link href="#organizers"><li>Organizers</li></Link>
-			<li>Official FAQ</li>
 			<Link >
 				<li>
 					<a href="https://twitter.com/secretnodes" rel="noopener noreferrer">
