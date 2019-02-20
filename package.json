@@ -1,7 +1,8 @@
 {
   "scripts": {
     "build": "next build src",
-    "export": "next export"
+    "export": "next export",
+    "start": "next start src"
   },
   "dependencies": {
     "@emotion/core": "^10.0.7",
