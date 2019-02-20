@@ -3,7 +3,7 @@
   "license": "MIT",
    "scripts": {
     "build": "next build src",
-    "export": "next export"
+    "export": "next export src"
   },
  "dependencies": {
     "@emotion/core": "^10.0.7",
