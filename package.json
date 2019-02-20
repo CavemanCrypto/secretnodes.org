@@ -1,10 +1,10 @@
 {
-  "version": "0.0.28",
+  "version": "0.0.29",
   "license": "MIT",
    "scripts": {
     "dev": "next src",
     "build": "next build src",
-    "start": "next start",
+    "start": "next start src",
     "export": "next build src && next export src"
   },
  "dependencies": {
