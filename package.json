@@ -1,7 +1,8 @@
 {
+  "version": "0.0.1",
    "scripts": {
-    "build": "build src",
-    "export": "export src"
+    "build": "next build src",
+    "export": "next export src"
   },
  "dependencies": {
     "@emotion/core": "^10.0.7",
