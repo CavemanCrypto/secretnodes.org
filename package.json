@@ -1,8 +1,8 @@
 {
 	"scripts": {
-		"build": "next build",
-		"export": "next export",
-		"deploy": "npm run build && npm run export"
+		"build": "next build src",
+		"export": "next export src",
+		"deploy": "npm run build src && npm run export src"
    },
   "dependencies": {
     "@emotion/core": "^10.0.7",
