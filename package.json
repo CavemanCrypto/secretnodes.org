@@ -1,8 +1,8 @@
 {
-  "version": "0.0.27",
+  "version": "0.0.28",
   "license": "MIT",
    "scripts": {
-    "dev": "next",
+    "dev": "next src",
     "build": "next build src",
     "start": "next start",
     "export": "next build src && next export src"
