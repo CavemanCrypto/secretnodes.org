@@ -1,13 +1,13 @@
 {
   "version": "0.0.291",
   "license": "MIT",
-   "scripts": {
-    "dev": "next src",
-    "build": "next build src",
-    "start": "next start src",
-    "export": "next build src && next export src"
-  },
- "dependencies": {
+	"scripts": {
+			"dev": "next src",
+			"build": "next build src",
+			"start": "next start src",
+			"export": "next build src && next export src"
+		},
+    "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
     "fontfaceobserver": "^2.1.0",
