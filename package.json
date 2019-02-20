@@ -1,12 +1,9 @@
 {
   "version": "0.0.1",
+  "license": "MIT",
    "scripts": {
     "build": "next build src",
-<<<<<<< HEAD
     "export": "next export"
-=======
-    "export": "next export src"
->>>>>>> 806a6be38cf76a4a68a47baa92eedaaba5dc4cf2
   },
  "dependencies": {
     "@emotion/core": "^10.0.7",
