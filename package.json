@@ -5,7 +5,7 @@
 			"dev": "next src",
 			"build": "next build src",
 			"start": "next start src",
-			"export": "next build src && next export"
+			"export": "next build src && next export src"
 		},
     "dependencies": {
     "@emotion/core": "^10.0.7",
