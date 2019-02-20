@@ -4,7 +4,6 @@ import styled from '@emotion/styled'
 // based on screen size or how you want it displayed
 const AvatarContainer = props => {
 	// if no src, return
-	// nothing to see here
 	if(!props.src) return
 	
 	const Avatar = styled('img')`
@@ -28,6 +27,7 @@ const AvatarContainer = props => {
 
 	return (
 		<Container>
+			<Avatar src={src} />
 			<TextWrapper>
 				<h2>{name}</h2>
 				<span>{role}</span>

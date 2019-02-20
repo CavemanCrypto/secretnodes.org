@@ -1,8 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
 
+import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 import Intro from '../components/Intro'
+import Organizers from '../components/Organizers'
+import Overview from '../components/Overview'
+import ProfitabilityCalc from '../components/ProfitabilityCalc'
 import Fonts from '../helpers/Fonts'
 
 const breakpoints = [870, 1000]
@@ -23,6 +27,10 @@ export default class Index extends React.Component {
 					<title>secretnodes.org</title>
 				</Head>
 				<Intro mediaQueries={mq} />
+				<Overview />
+				<ProfitabilityCalc />
+				<Organizers />
+				<Footer mediaQueries={mq} />
 			</Layout>
 		)	
 	}

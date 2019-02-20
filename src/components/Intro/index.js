@@ -48,7 +48,7 @@ const Intro = (props) => {
 			height: 410,
 			'.hero-image': {
 				position: 'absolute',
-				top: 285,
+				top: 300,
 				left: 485,
 				width: 348,
 				height: 250,
