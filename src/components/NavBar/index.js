@@ -2,7 +2,6 @@ import Link from 'next/link'
 import styled from '@emotion/styled'
 
 const NavBar = props => {
-	console.log(props)
 	const Nav = styled('nav')({
 			'.twitter-icon': {
 				height: 25,
@@ -38,7 +37,7 @@ const NavBar = props => {
 			'.menu-icon': {
 				display: 'none',
 			},
-			[props.mediaQueries[1]]: {
+			[props.mediaQueries[2]]: {
 				ul: {
 					display: 'none'
 				},
@@ -49,7 +48,29 @@ const NavBar = props => {
 					cursor: 'pointer',
 					background: 'none',
 					color: 'none'
-				}
+				},
+			},
+			[props.mediaQueries[1]]: {
+				fontSize: '1.3rem',
+				height: 80,
+				'.menu-icon': {
+					height: 25,
+				},
+				img: {
+					height: 70,
+				}	
+			},
+			[props.mediaQueries[0]]: {
+				height: 40,
+				fontSize: '1rem',
+				img: {
+					height: 50,
+				},
+				'.logo-wrapper': {
+					justifyContent: 'space-between',
+					width: '65%',
+					paddingLeft: 6,
+				},
 			},
 		})
 
@@ -62,8 +83,9 @@ const NavBar = props => {
 		<img src="/static/menu-icon.svg" className="menu-icon" />
 		<ul>
 			<Link href="#secret-nodes"><li>Secret Nodes</li></Link>
-			<Link href="#profitability-calc"><li>Profitability Calculator</li></Link>
-			<Link href="#organizers"><li>Organizers</li></Link>
+			<Link href="#rewards"><li>Rewards</li></Link>
+			<Link href="#contributors"><li>Contributors</li></Link>
+			<Link href="#privacy-policy"><li>Privacy Policy</li></Link>
 			<Link >
 				<li>
 					<a href="https://twitter.com/secretnodes" rel="noopener noreferrer">

@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default () => 
-	<section id="profitability-calc">
+	<section id="rewards">
 		<style jsx>{`
 			section {
 				height: 460px;

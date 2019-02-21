@@ -47,23 +47,31 @@ const PageFooter = props => {
 			alignItems: 'center',
 		},
 		[props.mediaQueries[1]]: {
-			fontSize: '.8em'
-		}
+			'.secret-nodes-motto': {
+				display: 'none'
+			},
+			fontSize: '.8em',
+		},
+		[props.mediaQueries[0]]: {
+			height: 100,
+			fontSize: '1em',
+			'.footer-content-wrapper': {
+				flexDirection: 'column',
+				height: 'auto',
+			},
+		},
 	})
 	return (
 		<Footer>
 			<div className="footer-content-wrapper">
 				<div className="logo-wrapper">
 					<img className="secret-nodes-logo" src="/static/favicon.png" alt="" />
-					<span className="span-copyright">secretnodes.org ©</span>
-					<span>empowering people to secure the privacy layer of the web since 2018</span>
+					<span className="span-copyright">secretnodes.org©</span>
+					<span className="secret-nodes-motto">empowering people to secure the privacy layer of the web since 2018</span>
 				</div>
-				<span className="span-privacy-policy">Privacy Policy</span>
-				<Link to="/privacy-policy">
-					<span className="special-span">
-						built with love by the moonstash think tank
-					</span>
-				</Link>
+				<span className="special-span">
+					built with love by the moonstash think tank
+				</span>
 			</div>
 		</Footer>
 	)
