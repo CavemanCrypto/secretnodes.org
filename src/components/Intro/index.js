@@ -48,10 +48,9 @@ const Intro = (props) => {
 			height: 410,
 			'.hero-image': {
 				position: 'absolute',
-				top: 300,
-				left: 485,
-				width: 348,
-				height: 250,
+				top: 350,
+				left: 480,
+				width: '30%'
 			},
 			h1: {
 				width: 635,
@@ -59,6 +58,30 @@ const Intro = (props) => {
 			p: {
 				width: 490,
 				marginTop: 10,
+			}
+		},
+		[props.mediaQueries[0]]: {
+			height: '80vh',
+			textAlign: 'center',
+			'.button-container': {
+				flexDirection: 'column',
+				marginTop: 30,
+			},
+			'.hero-image': {
+				display: 'none',
+			},
+			div: {
+				alignItems: 'center',
+			},
+			p: {
+				width: 270,
+			},
+			h1: {
+				width: 275,
+				fontSize: 35,
+			},
+			'.telegram-icon': {
+				height: 20,
 			}
 		},
 	})
@@ -70,13 +93,13 @@ const Intro = (props) => {
 				<p>We're a community-led group of individuals who care about privacy, data ownership, and are dedicated to supporting secret node runners.</p>
 				<div className="button-container">
 					<a href="https://t.me/secretnodes" rel="noopener noreferrer">
-						<ButtonPrimary>
+						<ButtonPrimary mediaQueries={props.mediaQueries}>
 							<img className="telegram-icon" src="./static/telegram_icon.png" />
 							Join Our Telegram
 						</ButtonPrimary>
 					</a>
 					<a href="https://forum.enigma.co/c/enigma-nodes">
-						<ButtonPrimary>Enigma Node Forums</ButtonPrimary>
+						<ButtonPrimary mediaQueries={props.mediaQueries}>Enigma Node Forums</ButtonPrimary>
 					</a>
 				</div>
 			</div>

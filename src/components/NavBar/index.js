@@ -37,7 +37,7 @@ const NavBar = props => {
 			'.menu-icon': {
 				display: 'none',
 			},
-			[props.mediaQueries[1]]: {
+			[props.mediaQueries[2]]: {
 				ul: {
 					display: 'none'
 				},
@@ -48,7 +48,28 @@ const NavBar = props => {
 					cursor: 'pointer',
 					background: 'none',
 					color: 'none'
-				}
+				},
+			},
+			[props.mediaQueries[1]]: {
+				fontSize: '1.3rem',
+				height: 80,
+				'.menu-icon': {
+					height: 30,
+				},
+				img: {
+					height: 70,
+				}	
+			},
+			[props.mediaQueries[0]]: {
+				height: 40,
+				img: {
+					height: 50,
+				},
+				'.logo-wrapper': {
+					justifyContent: 'space-between',
+					width: 250,
+					paddingLeft: 6,
+				},
 			},
 		})
 

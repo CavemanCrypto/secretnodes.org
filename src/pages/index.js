@@ -9,7 +9,7 @@ import Overview from '../components/Overview'
 import ProfitabilityCalc from '../components/ProfitabilityCalc'
 import Fonts from '../helpers/Fonts'
 
-const breakpoints = [870, 1000]
+const breakpoints = [500, 750, 1000]
 
 const mq = breakpoints.map(
   bp => `@media (max-width: ${bp}px)`
