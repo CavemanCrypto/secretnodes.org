@@ -10,6 +10,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
+    "@zeit/next-source-maps": "^0.0.3",
     "fontfaceobserver": "^2.1.0",
     "next": "^8.0.1",
     "node-sass": "^4.11.0",

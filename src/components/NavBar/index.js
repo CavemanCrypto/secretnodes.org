@@ -2,7 +2,6 @@ import Link from 'next/link'
 import styled from '@emotion/styled'
 
 const NavBar = props => {
-	console.log(props)
 	const Nav = styled('nav')({
 			'.twitter-icon': {
 				height: 25,
