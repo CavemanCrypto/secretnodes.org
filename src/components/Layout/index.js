@@ -1,6 +1,7 @@
 import React from 'react'
 import ContentContainer from '../ContentContainer'
 import NavBar from '../NavBar'
+import Footer from '../Footer'
 
 const Layout = props => 
 	<div>
@@ -19,7 +20,8 @@ const Layout = props =>
 				background-image: url("/static/background_pattern.png");
 				background-size: 900px;
 			}	
-		`}</style>
+			`}</style>
+		<Footer mediaQueries={props.mediaQueries} />
 	</div>
 
 export default Layout;
