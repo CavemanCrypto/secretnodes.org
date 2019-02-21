@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 import Intro from '../components/Intro'
 import Overview from '../components/Overview'
-import ProfitabilityCalc from '../components/ProfitabilityCalc'
+import Rewards from '../components/Rewards'
 
 const breakpoints = [500, 770, 1000]
 
@@ -29,7 +29,7 @@ export default class Index extends React.Component {
 				</Head>
 				<Intro mediaQueries={mq} />
 				<Overview />
-				<ProfitabilityCalc />
+				<Rewards />
 				<Contributors mediaQueries={mq} />
 				<Footer mediaQueries={mq} />
 			</Layout>
