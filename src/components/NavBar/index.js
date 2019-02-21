@@ -54,7 +54,7 @@ const NavBar = props => {
 				fontSize: '1.3rem',
 				height: 80,
 				'.menu-icon': {
-					height: 30,
+					height: 25,
 				},
 				img: {
 					height: 70,
@@ -62,12 +62,13 @@ const NavBar = props => {
 			},
 			[props.mediaQueries[0]]: {
 				height: 40,
+				fontSize: '1rem',
 				img: {
 					height: 50,
 				},
 				'.logo-wrapper': {
 					justifyContent: 'space-between',
-					width: 250,
+					width: '65%',
 					paddingLeft: 6,
 				},
 			},

@@ -1,15 +1,15 @@
 import React from 'react'
 import Head from 'next/head'
 
+import Contributors from '../components/Contributors'
+import Fonts from '../helpers/Fonts'
 import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 import Intro from '../components/Intro'
-import Organizers from '../components/Organizers'
 import Overview from '../components/Overview'
 import ProfitabilityCalc from '../components/ProfitabilityCalc'
-import Fonts from '../helpers/Fonts'
 
-const breakpoints = [500, 750, 1000]
+const breakpoints = [500, 770, 1000]
 
 const mq = breakpoints.map(
   bp => `@media (max-width: ${bp}px)`
@@ -30,7 +30,7 @@ export default class Index extends React.Component {
 				<Intro mediaQueries={mq} />
 				<Overview />
 				<ProfitabilityCalc />
-				<Organizers />
+				<Contributors mediaQueries={mq} />
 				<Footer mediaQueries={mq} />
 			</Layout>
 		)	

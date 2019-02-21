@@ -48,9 +48,9 @@ const Intro = (props) => {
 			height: 410,
 			'.hero-image': {
 				position: 'absolute',
-				top: 350,
-				left: 480,
-				width: '30%'
+				top: 375,
+				left: 385,
+				width: '35%'
 			},
 			h1: {
 				width: 635,
@@ -61,7 +61,8 @@ const Intro = (props) => {
 			}
 		},
 		[props.mediaQueries[0]]: {
-			height: '80vh',
+			height: '90vh',
+			padding: 20,
 			textAlign: 'center',
 			'.button-container': {
 				flexDirection: 'column',
@@ -72,6 +73,7 @@ const Intro = (props) => {
 			},
 			div: {
 				alignItems: 'center',
+				marginTop: 0,
 			},
 			p: {
 				width: 270,
