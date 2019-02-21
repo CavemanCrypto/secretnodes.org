@@ -14208,7 +14208,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _ContentContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ContentContainer */ "./components/ContentContainer/index.js");
 /* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../NavBar */ "./components/NavBar/index.js");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Footer */ "./components/Footer/index.js");
 var _jsxFileName = "/Users/deadcell/Desktop/secretnodesorg-full/src/components/Layout/index.js";
+
 
 
 
@@ -14216,29 +14218,36 @@ var _jsxFileName = "/Users/deadcell/Desktop/secretnodesorg-full/src/components/L
 
 var Layout = function Layout(props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-4025291361",
+    className: "jsx-1050204628",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 7
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
     mediaQueries: props.mediaQueries,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 8
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ContentContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     },
     __self: this
   }, props.children), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "4025291361",
+    id: "1050204628",
     __self: this
-  }, "body{font-family:'Titillium Web',sans-serif;margin:0;padding:0;background-position:left 145px;background-repeat:repeat;background-color:#065198;background-image:url(\"/static/background_pattern.png\");background-size:900px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kZWFkY2VsbC9EZXNrdG9wL3NlY3JldG5vZGVzb3JnLWZ1bGwvc3JjL2NvbXBvbmVudHMvTGF5b3V0L2luZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVVxQixBQUc2Qyx1Q0FDL0IsU0FDQyxVQUNxQiwrQkFDTix5QkFDQSx5QkFDOEIsdURBQ2pDLHNCQUN2QiIsImZpbGUiOiIvVXNlcnMvZGVhZGNlbGwvRGVza3RvcC9zZWNyZXRub2Rlc29yZy1mdWxsL3NyYy9jb21wb25lbnRzL0xheW91dC9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcbmltcG9ydCBDb250ZW50Q29udGFpbmVyIGZyb20gJy4uL0NvbnRlbnRDb250YWluZXInXG5pbXBvcnQgTmF2QmFyIGZyb20gJy4uL05hdkJhcidcblxuY29uc3QgTGF5b3V0ID0gcHJvcHMgPT4gXG5cdDxkaXY+XG5cdFx0PE5hdkJhciBtZWRpYVF1ZXJpZXM9e3Byb3BzLm1lZGlhUXVlcmllc30vPlxuXHRcdDxDb250ZW50Q29udGFpbmVyPlxuXHRcdFx0e3Byb3BzLmNoaWxkcmVufVxuXHRcdDwvQ29udGVudENvbnRhaW5lcj5cblx0XHQ8c3R5bGUgZ2xvYmFsIGpzeD57YFxuXHRcdFx0Ym9keSB7XG5cdFx0XHRcdGZvbnQtZmFtaWx5OiAnVGl0aWxsaXVtIFdlYicsIHNhbnMtc2VyaWY7XG5cdFx0XHRcdG1hcmdpbjogMDtcblx0XHRcdFx0cGFkZGluZzogMDtcblx0XHRcdFx0YmFja2dyb3VuZC1wb3NpdGlvbjogbGVmdCAxNDVweDtcblx0XHRcdFx0YmFja2dyb3VuZC1yZXBlYXQ6IHJlcGVhdDtcblx0XHRcdFx0YmFja2dyb3VuZC1jb2xvcjogIzA2NTE5ODtcblx0XHRcdFx0YmFja2dyb3VuZC1pbWFnZTogdXJsKFwiL3N0YXRpYy9iYWNrZ3JvdW5kX3BhdHRlcm4ucG5nXCIpO1xuXHRcdFx0XHRiYWNrZ3JvdW5kLXNpemU6IDkwMHB4O1xuXHRcdFx0fVx0XG5cdFx0YH08L3N0eWxlPlxuXHQ8L2Rpdj5cblxuZXhwb3J0IGRlZmF1bHQgTGF5b3V0O1xuIl19 */\n/*@ sourceURL=/Users/deadcell/Desktop/secretnodesorg-full/src/components/Layout/index.js */"));
+  }, "body{font-family:'Titillium Web',sans-serif;margin:0;padding:0;background-position:left 145px;background-repeat:repeat;background-color:#065198;background-image:url(\"/static/background_pattern.png\");background-size:900px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kZWFkY2VsbC9EZXNrdG9wL3NlY3JldG5vZGVzb3JnLWZ1bGwvc3JjL2NvbXBvbmVudHMvTGF5b3V0L2luZGV4LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVdxQixBQUc2Qyx1Q0FDL0IsU0FDQyxVQUNxQiwrQkFDTix5QkFDQSx5QkFDOEIsdURBQ2pDLHNCQUN2QiIsImZpbGUiOiIvVXNlcnMvZGVhZGNlbGwvRGVza3RvcC9zZWNyZXRub2Rlc29yZy1mdWxsL3NyYy9jb21wb25lbnRzL0xheW91dC9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcbmltcG9ydCBDb250ZW50Q29udGFpbmVyIGZyb20gJy4uL0NvbnRlbnRDb250YWluZXInXG5pbXBvcnQgTmF2QmFyIGZyb20gJy4uL05hdkJhcidcbmltcG9ydCBGb290ZXIgZnJvbSAnLi4vRm9vdGVyJ1xuXG5jb25zdCBMYXlvdXQgPSBwcm9wcyA9PiBcblx0PGRpdj5cblx0XHQ8TmF2QmFyIG1lZGlhUXVlcmllcz17cHJvcHMubWVkaWFRdWVyaWVzfS8+XG5cdFx0PENvbnRlbnRDb250YWluZXI+XG5cdFx0XHR7cHJvcHMuY2hpbGRyZW59XG5cdFx0PC9Db250ZW50Q29udGFpbmVyPlxuXHRcdDxzdHlsZSBnbG9iYWwganN4PntgXG5cdFx0XHRib2R5IHtcblx0XHRcdFx0Zm9udC1mYW1pbHk6ICdUaXRpbGxpdW0gV2ViJywgc2Fucy1zZXJpZjtcblx0XHRcdFx0bWFyZ2luOiAwO1xuXHRcdFx0XHRwYWRkaW5nOiAwO1xuXHRcdFx0XHRiYWNrZ3JvdW5kLXBvc2l0aW9uOiBsZWZ0IDE0NXB4O1xuXHRcdFx0XHRiYWNrZ3JvdW5kLXJlcGVhdDogcmVwZWF0O1xuXHRcdFx0XHRiYWNrZ3JvdW5kLWNvbG9yOiAjMDY1MTk4O1xuXHRcdFx0XHRiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIvc3RhdGljL2JhY2tncm91bmRfcGF0dGVybi5wbmdcIik7XG5cdFx0XHRcdGJhY2tncm91bmQtc2l6ZTogOTAwcHg7XG5cdFx0XHR9XHRcblx0XHRcdGB9PC9zdHlsZT5cblx0XHQ8Rm9vdGVyIG1lZGlhUXVlcmllcz17cHJvcHMubWVkaWFRdWVyaWVzfSAvPlxuXHQ8L2Rpdj5cblxuZXhwb3J0IGRlZmF1bHQgTGF5b3V0O1xuIl19 */\n/*@ sourceURL=/Users/deadcell/Desktop/secretnodesorg-full/src/components/Layout/index.js */"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    mediaQueries: props.mediaQueries,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -14290,7 +14299,8 @@ var NavBar = function NavBar(props) {
     },
     '.logo-wrapper': {
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      cursor: 'pointer'
     },
     background: '#152D72',
     height: 60,
@@ -14340,14 +14350,21 @@ var NavBar = function NavBar(props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Nav, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 79
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "logo-wrapper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 81
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -14355,82 +14372,44 @@ var NavBar = function NavBar(props) {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 82
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 83
     },
     __self: this
-  }, "secretnodes.org")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+  }, "secretnodes.org"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: "/static/menu-icon.svg",
     className: "menu-icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 86
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 87
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "#secret-nodes",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 88
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 88
     },
     __self: this
   }, "Secret Nodes")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "#rewards",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 86
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 86
-    },
-    __self: this
-  }, "Rewards")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "#contributors",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 87
-    },
-    __self: this
-  }, "Contributors")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "#privacy-policy",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: this
-  }, "Privacy Policy")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 89
@@ -14439,7 +14418,45 @@ var NavBar = function NavBar(props) {
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: this
+  }, "Rewards")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "#contributors",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 90
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: this
+  }, "Contributors")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/privacy-policy",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
+  }, "Privacy Policy")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
@@ -14447,7 +14464,7 @@ var NavBar = function NavBar(props) {
     rel: "noopener noreferrer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 94
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -14456,7 +14473,7 @@ var NavBar = function NavBar(props) {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 95
     },
     __self: this
   }))))));
@@ -14582,11 +14599,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_server_head__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _components_Contributors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Contributors */ "./components/Contributors/index.js");
 /* harmony import */ var _helpers_Fonts__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../helpers/Fonts */ "./helpers/Fonts/index.js");
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer/index.js");
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout/index.js");
-/* harmony import */ var _components_Intro__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/Intro */ "./components/Intro/index.js");
-/* harmony import */ var _components_Overview__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/Overview */ "./components/Overview/index.js");
-/* harmony import */ var _components_Rewards__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/Rewards */ "./components/Rewards/index.js");
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout/index.js");
+/* harmony import */ var _components_Intro__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/Intro */ "./components/Intro/index.js");
+/* harmony import */ var _components_Overview__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/Overview */ "./components/Overview/index.js");
+/* harmony import */ var _components_Rewards__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/Rewards */ "./components/Rewards/index.js");
 
 
 
@@ -14595,7 +14611,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/deadcell/Desktop/secretnodesorg-full/src/pages/index.js";
-
 
 
 
@@ -14650,23 +14665,23 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_11__["default"], {
         mediaQueries: mq,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 24
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_8___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 26
         },
         __self: this
       }, "secretnodes.org"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("meta", {
@@ -14674,40 +14689,33 @@ function (_React$Component) {
         content: "width=device-width, initial-scale=1.0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 27
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Intro__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Intro__WEBPACK_IMPORTED_MODULE_12__["default"], {
         mediaQueries: mq,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Overview__WEBPACK_IMPORTED_MODULE_13__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 30
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Overview__WEBPACK_IMPORTED_MODULE_14__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Rewards__WEBPACK_IMPORTED_MODULE_14__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 31
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Rewards__WEBPACK_IMPORTED_MODULE_15__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Contributors__WEBPACK_IMPORTED_MODULE_9__["default"], {
         mediaQueries: mq,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], {
-        mediaQueries: mq,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 32
         },
         __self: this
       }));
@@ -14857,7 +14865,7 @@ var ButtonPrimary = function ButtonPrimary(props) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fdeadcell%2FDesktop%2Fsecretnodesorg-full%2Fsrc%2Fpages%2Findex.js ***!
   \*********************************************************************************************************************************************/
@@ -14880,5 +14888,5 @@ module.exports = dll_0b928c998ea3235775f1;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]));;
+},[[3,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=index.js.map
