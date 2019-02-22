@@ -31,6 +31,6 @@ export default class Index extends React.Component {
 				<Rewards />
 				<Contributors mediaQueries={mq} />
 			</Layout>
-		)	
+		)
 	}
 }
