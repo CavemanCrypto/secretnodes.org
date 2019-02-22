@@ -66,11 +66,6 @@ const NavBar = props => {
       fontSize: '1rem',
       img: {
         height: 50
-      },
-      '.logo-wrapper': {
-        justifyContent: 'space-between',
-        width: '65%',
-        paddingLeft: 6
       }
     }
   })
