@@ -3,7 +3,6 @@ import Head from 'next/head'
 
 import Contributors from '../components/Contributors'
 import Fonts from '../helpers/Fonts'
-import Footer from '../components/Footer'
 import Layout from '../components/Layout'
 import Intro from '../components/Intro'
 import Overview from '../components/Overview'
@@ -31,7 +30,6 @@ export default class Index extends React.Component {
 				<Overview />
 				<Rewards />
 				<Contributors mediaQueries={mq} />
-				<Footer mediaQueries={mq} />
 			</Layout>
 		)	
 	}

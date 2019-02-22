@@ -66,4 +66,5 @@ build
 .next-export
 
 # misc
+*.js.swp
 .DS_Store

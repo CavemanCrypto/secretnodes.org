@@ -24,6 +24,7 @@ const NavBar = props => {
 			'.logo-wrapper': {
 				display: 'flex',
 				alignItems: 'center',
+				cursor: 'pointer',
 			},
 			background: '#152D72',
 			height: 60,
@@ -76,16 +77,18 @@ const NavBar = props => {
 
 	return (
 		<Nav>
-		<div className="logo-wrapper">
-			<img src="/static/favicon.png" alt="" />
-			<span>secretnodes.org</span>
-		</div>
+		<Link href="/">
+			<div className="logo-wrapper">
+				<img src="/static/favicon.png" alt="" />
+				<span>secretnodes.org</span>
+			</div>
+		</Link>
 		<img src="/static/menu-icon.svg" className="menu-icon" />
 		<ul>
 			<Link href="#secret-nodes"><li>Secret Nodes</li></Link>
 			<Link href="#rewards"><li>Rewards</li></Link>
 			<Link href="#contributors"><li>Contributors</li></Link>
-			<Link href="#privacy-policy"><li>Privacy Policy</li></Link>
+			<Link href="/privacy-policy"><li>Privacy Policy</li></Link>
 			<Link >
 				<li>
 					<a href="https://twitter.com/secretnodes" rel="noopener noreferrer">
