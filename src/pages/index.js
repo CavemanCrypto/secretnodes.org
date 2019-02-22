@@ -15,22 +15,22 @@ const mq = breakpoints.map(
 )
 
 export default class Index extends React.Component {
-	async componentDidMount() {
-		await Fonts()
-	}
+  async componentDidMount () {
+    await Fonts()
+  }
 
-	render() {
-		return (
-			<Layout mediaQueries={mq}>
-				<Head>
-					<title>secretnodes.org</title>
-					<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				</Head>
-				<Intro mediaQueries={mq} />
-				<Overview />
-				<Rewards />
-				<Contributors mediaQueries={mq} />
-			</Layout>
-		)
-	}
+  render () {
+    return (
+      <Layout mediaQueries={mq}>
+        <Head>
+          <title>secretnodes.org</title>
+          <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        </Head>
+        <Intro mediaQueries={mq} />
+        <Overview />
+        <Rewards />
+        <Contributors mediaQueries={mq} />
+      </Layout>
+    )
+  }
 }

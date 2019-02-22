@@ -7,7 +7,7 @@ const Fonts = () => {
 
   document.head.appendChild(link)
 
-  const titillium  = new FontFaceObserver('Roboto')
+  const titillium = new FontFaceObserver('Roboto')
 
   titillium.load().then(() => {
     document.documentElement.classList.add('titillium')
