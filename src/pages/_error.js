@@ -50,14 +50,14 @@ class ErrorPage extends React.Component {
         {
           this.props.statusCode === 404
             ? <ErrorContainer>
-              <img src='https://media.giphy.com/media/bi6RQ5x3tqoSI/giphy.gif' />
+              <img src='/static/404.gif' />
               <span>
                 {this.props.statusCode}
               </span>
               <p>The page you are looking for could not be found.</p>
             </ErrorContainer>
             : <ErrorContainer>
-              <img src='https://gph.is/XIci15' />
+              <img src='/static/404.gif' />
               <span>
                 {this.props.statusCode}
               </span>
