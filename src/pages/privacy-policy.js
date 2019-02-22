@@ -61,7 +61,7 @@ const PrivacyPolicy = props => {
 					We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline.</p>
 				<p>Wherever we collect sensitive information, that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a lock icon in the address bar and looking for “https” at the beginning of the address of the Web page.</p>
 				<p>While we use encryption to protect sensitive information transmitted online, we also protect your information offline. The computers/servers in which we store personally identifiable information are kept in a secure environment.</p>
-				<p><span>If you feel that we are not abiding by this privacy policy, contact us at hello@secretnodes.org.</span></p>
+				<p><span>If you feel that we are not abiding by this privacy policy, contact us at privacy@secretnodes.org.</span></p>
 			</PolicyWrapper>
     </Layout>
 	 )
