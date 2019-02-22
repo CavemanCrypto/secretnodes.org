@@ -26,13 +26,15 @@ class ErrorPage extends React.Component {
 			letterSpacing: '.39px',
 			fontSize: 20,
 			padding: 10,
-			height: 600,
+			height: '80vh',
 			img: {
 				width: 'calc(100% - 40px)',
 			},
 			[mq[1]]: {
 				width: '80%',
-				height: 400,
+			},
+			[mq[0]]: {
+				width: '80%',
 				img: {
 					width: '100%',
 					marginTop: 60,
