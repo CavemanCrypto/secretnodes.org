@@ -8,7 +8,11 @@ const AvatarContainer = props => {
   const Avatar = styled('img')({
     width: 96,
     height: 96,
-    borderRadius: '50%'
+    borderRadius: '50%',
+    [props.mediaQueries[0]]: {
+      width: 76,
+      height: 76
+    }
   })
 
   // if no name and no role, just return the avatar
@@ -28,6 +32,11 @@ const AvatarContainer = props => {
     justifyContent: 'center',
     h2: {
       margin: 0
+    },
+    [props.mediaQueries[0]]: {
+      h2: {
+        fontSize: '1.5em'
+      }
     }
   })
 

@@ -11,6 +11,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/lib   s/normalize/8.0.0/normalize.min.css' />
+          <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         </Head>
         <body className='custom-class'>
           <Main />

@@ -54,7 +54,6 @@ class ErrorPage extends React.Component {
       <Layout mediaQueries={mq}>
         <Head>
           <title>Page not found</title>
-          <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         </Head>
         {
           this.props.statusCode === 404
