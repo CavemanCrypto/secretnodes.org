@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import styled from '@emotion/styled'
 import Layout from '../components/Layout'
 
@@ -27,11 +28,18 @@ class ErrorPage extends React.Component {
       fontSize: 20,
       padding: 10,
       height: '80vh',
+      span: {
+        fontSize: 70
+      },
       img: {
         width: 'calc(100% - 40px)'
       },
       [mq[1]]: {
-        width: '80%'
+        width: '80%',
+        span: {
+          fontSize: 50,
+          marginTop: 30
+        }
       },
       [mq[0]]: {
         width: '80%',
@@ -39,14 +47,15 @@ class ErrorPage extends React.Component {
           width: '100%',
           marginTop: 60
         }
-      },
-      span: {
-        fontSize: 70
       }
     })
 
     return (
       <Layout mediaQueries={mq}>
+        <Head>
+          <title>Page not found</title>
+          <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        </Head>
         {
           this.props.statusCode === 404
             ? <ErrorContainer>
