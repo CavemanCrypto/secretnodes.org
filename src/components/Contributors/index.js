@@ -26,13 +26,13 @@ const Contributors = props => {
     width: '100%',
     background: '#060b47',
     color: '#fbfbfd',
-    [props.mediaQueries[0]]: {
-      '.contributors-container': {
-        padding: 0
-      },
+    [props.mediaQueries[1]]: {
       h1: {
         textAlign: 'center',
         margin: '15px 0 0 0'
+      },
+      '.contributors-container': {
+        padding: 0
       }
     }
   })
