@@ -22,7 +22,10 @@ const AvatarContainer = props => {
   const Container = styled('div')({
     display: 'flex',
     width: 400,
-    padding: 20
+    padding: 20,
+    [props.mediaQueries[0]]: {
+      justifyContent: 'center'
+    }
   })
 
   const TextWrapper = styled('div')({
@@ -36,6 +39,9 @@ const AvatarContainer = props => {
     [props.mediaQueries[0]]: {
       h2: {
         fontSize: '1.5em'
+      },
+      span: {
+        maxWidth: 115
       }
     }
   })

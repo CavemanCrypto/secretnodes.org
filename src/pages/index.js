@@ -26,8 +26,8 @@ export default class Index extends React.Component {
           <title>secretnodes.org</title>
         </Head>
         <Intro mediaQueries={mq} />
-        <Overview />
-        <Rewards />
+        <Overview mediaQueries={mq} />
+        <Rewards mediaQueries={mq} />
         <Contributors mediaQueries={mq} />
       </Layout>
     )

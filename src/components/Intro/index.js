@@ -97,7 +97,7 @@ const Intro = (props) => {
           <a href='https://t.me/secretnodes' rel='noopener noreferrer'>
             <ButtonPrimary mediaQueries={props.mediaQueries}>
               <img className='telegram-icon' src='./static/telegram_icon.png' />
-							Join Our Telegram
+              Join Our Telegram
             </ButtonPrimary>
           </a>
           <a href='https://forum.enigma.co/c/enigma-nodes'>
