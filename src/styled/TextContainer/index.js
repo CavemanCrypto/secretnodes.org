@@ -2,7 +2,6 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 const TextContainer = props => {
-  console.log(props.children.length)
   const Text = styled('p')({
     color: '#FFF',
     width: '45%',
