@@ -18,9 +18,6 @@ const TextContainer = props => {
       fontSize: '1.1em',
       padding: 10,
       margin: 10
-    },
-    [props.mediaQueries[2]]: {
-      width: 'calc(45% + 300px)'
     }
   })
 
