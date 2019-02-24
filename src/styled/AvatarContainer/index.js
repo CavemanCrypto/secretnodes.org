@@ -9,7 +9,7 @@ const AvatarContainer = props => {
     width: 96,
     height: 96,
     borderRadius: '50%',
-    [props.mediaQueries[0]]: {
+    [props.mediaQueries[1]]: {
       width: 76,
       height: 76
     }
@@ -21,8 +21,11 @@ const AvatarContainer = props => {
   const { src, name, role } = props
   const Container = styled('div')({
     display: 'flex',
-    width: 400,
+    width: 250,
     padding: 20,
+    [props.mediaQueries[1]]: {
+      width: 225
+    },
     [props.mediaQueries[0]]: {
       justifyContent: 'center'
     }

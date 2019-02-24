@@ -8,6 +8,9 @@ const NavBar = props => {
       color: '#20B2F3',
       alignSelf: 'center'
     },
+    '.twitter-icon-container': {
+      height: 20
+    },
     span: {
       marginLeft: 10
     },
@@ -85,7 +88,7 @@ const NavBar = props => {
         <Link href='#contributors'><li>Contributors</li></Link>
         <Link href='/privacy-policy'><li>Privacy Policy</li></Link>
         <Link >
-          <li>
+          <li className='twitter-icon-container'>
             <a href='https://twitter.com/secretnodes' rel='noopener noreferrer'>
               <img className='twitter-icon' src='/static/twitter.png' alt='' />
             </a>

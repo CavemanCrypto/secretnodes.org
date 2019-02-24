@@ -9,14 +9,15 @@ const TextContainer = props => {
     fontWeight: '200',
     fontSize: '1.1em',
     letterSpacing: '.6px',
-    [props.mediaQueries[1]]: {
-      width: '85%',
-      fontSize: '.9em',
-      margin: 10
-    },
     [props.mediaQueries[0]]: {
       width: '90%',
-      fontSize: '1em'
+      fontSize: '.9em'
+    },
+    [props.mediaQueries[1]]: {
+      width: '85%',
+      fontSize: '1.1em',
+      padding: 10,
+      margin: 10
     }
   })
 

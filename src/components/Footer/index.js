@@ -34,6 +34,10 @@ const PageFooter = props => {
     '.telegram-icon, .twitter-icon': {
       height: 35
     },
+    a: {
+      textDecoration: 'none',
+      color: '#8d9399'
+    },
     ul: {
       display: 'flex',
       listStyle: 'none',
@@ -54,6 +58,9 @@ const PageFooter = props => {
     [props.mediaQueries[0]]: {
       height: 100,
       fontSize: '1em',
+      '.secret-nodes-motto': {
+        display: 'none'
+      },
       '.footer-content-wrapper': {
         flexDirection: 'column',
         height: 'auto'
@@ -68,7 +75,7 @@ const PageFooter = props => {
           <span className='span-copyright'>secretnodes.org©</span>
           <span className='secret-nodes-motto'>empowering people to secure the privacy layer of the web since 2018</span>
         </div>
-        <span className='special-span'>built with love by the moonstash think tank</span>
+        <span className='special-span'><a href='#' rel='noopener noreferrer'>built with love by the moonstash think tank</a></span>
       </div>
     </Footer>
   )

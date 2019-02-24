@@ -5,31 +5,31 @@ import AvatarContainer from '../../styled/AvatarContainer'
 const Contributors = props => {
   const ContributorsSection = styled('section')({
     h1: {
-      marginLeft: 41
+      marginLeft: 41,
+      textAlign: 'center'
     },
     '.role-container': {
       marginLeft: 20
-    },
-    '.avatar-container': {
-      display: 'flex',
-      width: 400,
-      padding: 20
     },
     '.contributors-container': {
       display: 'flex',
       alignItems: 'center',
       flexWrap: 'wrap',
-      padding: '0 40px'
+      padding: '0 40px',
+      justifyContent: 'center'
     },
     letterSpacing: '.6px',
     height: 'auto',
     width: '100%',
     background: '#060b47',
     color: '#fbfbfd',
+    minHeight: 300,
     [props.mediaQueries[1]]: {
       h1: {
-        textAlign: 'center',
         margin: '15px 0 0 0'
+      },
+      '.contributors-container': {
+        padding: '0 20px'
       },
       '.contributors-container': {
         padding: 0
