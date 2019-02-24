@@ -8,8 +8,9 @@ const RewardsSection = props => {
     height: 'auto',
     maxWidth: '100vw',
     color: '#FFF',
-    display: 'flex',
-    justifyContent: 'flex-start',
+		display: 'flex',
+		textAlign: 'center',
+    justifyContent: 'center',
     flexWrap: 'wrap',
     padding: '21px 41px',
     h1: {
