@@ -7,8 +7,8 @@ const OverviewSection = props => {
   const Overview = styled('section')({
     height: 'auto',
     maxWidth: '100vw',
-		color: '#FFF',
-		textAlign: 'center',
+    color: '#FFF',
+    textAlign: 'center',
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',

@@ -7,10 +7,10 @@ const NavBar = props => {
       height: 25,
       color: '#20B2F3',
       alignSelf: 'center'
-		},
-		'.twitter-icon-container': {
-			height: 20
-		},
+    },
+    '.twitter-icon-container': {
+      height: 20
+    },
     span: {
       marginLeft: 10
     },

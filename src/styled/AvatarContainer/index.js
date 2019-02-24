@@ -22,10 +22,10 @@ const AvatarContainer = props => {
   const Container = styled('div')({
     display: 'flex',
     width: 250,
-		padding: 20,
-		[props.mediaQueries[1]]: {
-			width: 225
-		},
+    padding: 20,
+    [props.mediaQueries[1]]: {
+      width: 225
+    },
     [props.mediaQueries[0]]: {
       justifyContent: 'center'
     }
