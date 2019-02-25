@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from '@emotion/styled'
 
 import TextContainer from '../../styled/TextContainer'
@@ -12,8 +11,8 @@ const RewardsSection = props => {
     justifyContent: 'center',
     flexWrap: 'wrap',
     padding: '21px 41px',
-		h1: {
-			textAlign: 'center',
+    h1: {
+      textAlign: 'center',
       margin: 0,
       flexBasis: '100%',
       fontWeight: 400,
