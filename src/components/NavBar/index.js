@@ -175,7 +175,7 @@ export default class NavBar extends React.Component {
 	        </div>
 </Link>
 	      <div style={{ display: ['/privacy-policy', '/_error'].includes(this.props.url.pathname) ? 'none' : '', height: moreShit }} className='dropdown-menu-container'>
-					<img onClick={this.dropdownHandler} style={{marginRight: this.state.showMenu ? responsiveMenuDisplay : '15px'}} src='/static/menu-icon.svg' id='menu-icon' aria-haspopup='true' aria-expanded={this.state.showMenu ? 'true' : 'false'} aria-controls='dropdown-menu' />
+					<img onClick={this.dropdownHandler} style={{marginRight: this.state.showMenu ? responsiveMenuDisplay : '10px'}} src='/static/menu-icon.svg' id='menu-icon' aria-haspopup='true' aria-expanded={this.state.showMenu ? 'true' : 'false'} aria-controls='dropdown-menu' />
       {
 	          this.state.showMenu
 	            ?								<ul id='dropdown-menu' role='menu' aria-labelledby='menu-icon' style={{ background: this.state.showMenu ? 'rgb(79, 133, 182)' : '' }}>
