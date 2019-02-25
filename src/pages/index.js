@@ -21,7 +21,7 @@ export default class Index extends React.Component {
 
   render () {
     return (
-      <Layout mediaQueries={mq}>
+      <Layout {...this.props} mediaQueries={mq}>
         <Head>
           <title>secretnodes.org</title>
         </Head>

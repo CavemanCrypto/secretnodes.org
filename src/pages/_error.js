@@ -10,7 +10,7 @@ class ErrorPage extends React.Component {
   }
 
   render () {
-    const breakpoints = [500, 770, 1000]
+    const breakpoints = [500, 915, 1200]
 
     const mq = breakpoints.map(
       bp => `@media (max-width: ${bp}px)`
@@ -51,7 +51,7 @@ class ErrorPage extends React.Component {
     })
 
     return (
-      <Layout mediaQueries={mq}>
+      <Layout {...this.props} mediaQueries={mq}>
         <Head>
           <title>Page not found</title>
         </Head>
