@@ -14281,7 +14281,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
         onClick: this.dropdownHandler,
         style: {
-          marginRight: this.state.showMenu ? responsiveMenuDisplay : '15px'
+          marginRight: this.state.showMenu ? responsiveMenuDisplay : '10px'
         },
         src: "/static/menu-icon.svg",
         id: "menu-icon",
