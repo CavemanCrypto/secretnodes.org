@@ -97,7 +97,7 @@ export default class NavBar extends React.Component {
 	        margin: 7
 	      },
 	      '.styled-menu': {
-	        paddingTop: 15
+	        paddingTop: 10
 	      },
 	      '#regular-menu': {
 	        display: 'none'
@@ -110,12 +110,12 @@ export default class NavBar extends React.Component {
 	        borderBottomLeftRadius: '10%',
 	        position: 'relative',
 	        width: 205,
-	        height: 210,
+	        height: 250,
 	        right: 30
 	      },
 	      '.dropdown-menu-container': {
 	        display: 'flex',
-	        height: 280,
+	        height: 252,
 	        width: 165,
 	        flexDirection: 'column',
 	        paddingTop: 22,
@@ -129,7 +129,8 @@ export default class NavBar extends React.Component {
 	        marginRight: 15,
 	        cursor: 'pointer',
 	        background: 'none',
-	        color: 'none'
+					color: 'none',
+					marginBottom: 14 
 	      },
 	      '#dropdown-menu > li': {
 	        margin: 6
@@ -158,11 +159,13 @@ export default class NavBar extends React.Component {
 	        height: 50
 	      },
 	      '#dropdown-menu': {
-	        top: '-9px'
+	        top: '-1px'
 	      }
-	    }
-	  })
-	  const toggleFlexAlignment = this.state.showMenu ? 'flex-start' : 'center'
+			},
+	 })
+	 const toggleFlexAlignment = this.state.showMenu ? 'flex-start' : 'center'
+	 const responsiveMenuDisplay = typeof window !== 'undefined' && window.innerWidth <= 320 ? '68px' : '10px'
+	 const moreShit = typeof window !== 'undefined' && window.innerWidth >=740 ? '315px' : '252px'
 	  return (
   <Nav style={{ alignItems: toggleFlexAlignment }}>
   <Link href='/'>
@@ -171,8 +174,8 @@ export default class NavBar extends React.Component {
 	          <span>secretnodes.org</span>
 	        </div>
 </Link>
-	      <div style={{ display: ['/privacy-policy', '/_error'].includes(this.props.url.pathname) ? 'none' : '' }} className='dropdown-menu-container'>
-      <img onClick={this.dropdownHandler} src='/static/menu-icon.svg' id='menu-icon' aria-haspopup='true' aria-expanded={this.state.showMenu ? 'true' : 'false'} aria-controls='dropdown-menu' />
+	      <div style={{ display: ['/privacy-policy', '/_error'].includes(this.props.url.pathname) ? 'none' : '', height: moreShit }} className='dropdown-menu-container'>
+					<img onClick={this.dropdownHandler} style={{marginRight: this.state.showMenu ? responsiveMenuDisplay : '15px'}} src='/static/menu-icon.svg' id='menu-icon' aria-haspopup='true' aria-expanded={this.state.showMenu ? 'true' : 'false'} aria-controls='dropdown-menu' />
       {
 	          this.state.showMenu
 	            ?								<ul id='dropdown-menu' role='menu' aria-labelledby='menu-icon' style={{ background: this.state.showMenu ? 'rgb(79, 133, 182)' : '' }}>
@@ -180,13 +183,11 @@ export default class NavBar extends React.Component {
   <Link href='#rewards'><div className='styled-menu'><li role='menuitem'>Rewards</li></div></Link>
 	              <Link href='#contributors'><div className='styled-menu'><li role='menuitem'> Contributors</li></div></Link>
   <Link href='/privacy-policy'><div className='styled-menu'><li role='menuitem'>Privacy Policy</li></div></Link>
-	              <Link >
 	                <li className='twitter-icon-container'>
 	                  <a href='https://twitter.com/secretnodes' rel='noopener noreferrer'>
     <img className='twitter-icon' src='/static/twitter.png' alt='' />
   </a>
   </li>
-  </Link>
 	            </ul>
 	            :								null
 	        }
@@ -196,13 +197,11 @@ export default class NavBar extends React.Component {
       <Link href='#rewards'><li>Rewards</li></Link>
       <Link href='#contributors'><li>Contributors</li></Link>
       <Link href='/privacy-policy'><li>Privacy Policy</li></Link>
-      <Link >
   <li className='twitter-icon-container'>
   <a href='https://twitter.com/secretnodes' rel='noopener noreferrer'>
   <img className='twitter-icon' src='/static/twitter.png' alt='' />
 	            </a>
 	          </li>
-	        </Link>
     </ul>
 	    </Nav>
 	  )
