@@ -1,8 +1,7 @@
-import React from 'react'
 import ButtonPrimary from '../../styled/Button'
 import styled from '@emotion/styled'
 
-const Intro = (props) => {
+const Intro = props => {
   const IntroSection = styled('section')({
     a: {
       textDecoration: 'none',

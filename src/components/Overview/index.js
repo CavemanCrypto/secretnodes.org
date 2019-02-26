@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from '@emotion/styled'
 
 import TextContainer from '../../styled/TextContainer'
@@ -8,13 +7,13 @@ const OverviewSection = props => {
     height: 'auto',
     maxWidth: '100vw',
     color: '#FFF',
-    textAlign: 'center',
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
     padding: '21px 41px',
     background: '#060B47',
     h1: {
+      textAlign: 'center',
       margin: 0,
       flexBasis: '100%',
       fontWeight: 400,

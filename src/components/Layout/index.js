@@ -1,11 +1,10 @@
-import React from 'react'
 import ContentContainer from '../ContentContainer'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
 
 const Layout = props =>
   <div>
-    <NavBar mediaQueries={props.mediaQueries} />
+    <NavBar {...props} mediaQueries={props.mediaQueries} />
     <ContentContainer>
       {props.children}
     </ContentContainer>

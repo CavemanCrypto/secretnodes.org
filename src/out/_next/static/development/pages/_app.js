@@ -66,6 +66,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/get-prototype
 
 /***/ }),
 
+/***/ "../node_modules/@babel/runtime-corejs2/core-js/object/keys.js":
+/*!*********************************************************************!*\
+  !*** ../node_modules/@babel/runtime-corejs2/core-js/object/keys.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "../node_modules/core-js/library/fn/object/keys.js");
+
+/***/ }),
+
 /***/ "../node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js":
 /*!*********************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js ***!
@@ -766,6 +777,19 @@ module.exports = function defineProperty(it, key, desc) {
 
 __webpack_require__(/*! ../../modules/es6.object.get-prototype-of */ "../node_modules/core-js/library/modules/es6.object.get-prototype-of.js");
 module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/core-js/library/modules/_core.js").Object.getPrototypeOf;
+
+
+/***/ }),
+
+/***/ "../node_modules/core-js/library/fn/object/keys.js":
+/*!*********************************************************!*\
+  !*** ../node_modules/core-js/library/fn/object/keys.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.object.keys */ "../node_modules/core-js/library/modules/es6.object.keys.js");
+module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/core-js/library/modules/_core.js").Object.keys;
 
 
 /***/ }),
@@ -3338,6 +3362,26 @@ __webpack_require__(/*! ./_object-sap */ "../node_modules/core-js/library/module
 
 /***/ }),
 
+/***/ "../node_modules/core-js/library/modules/es6.object.keys.js":
+/*!******************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es6.object.keys.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.14 Object.keys(O)
+var toObject = __webpack_require__(/*! ./_to-object */ "../node_modules/core-js/library/modules/_to-object.js");
+var $keys = __webpack_require__(/*! ./_object-keys */ "../node_modules/core-js/library/modules/_object-keys.js");
+
+__webpack_require__(/*! ./_object-sap */ "../node_modules/core-js/library/modules/_object-sap.js")('keys', function () {
+  return function keys(it) {
+    return $keys(toObject(it));
+  };
+});
+
+
+/***/ }),
+
 /***/ "../node_modules/core-js/library/modules/es6.object.set-prototype-of.js":
 /*!******************************************************************************!*\
   !*** ../node_modules/core-js/library/modules/es6.object.set-prototype-of.js ***!
@@ -4400,7 +4444,7 @@ function () {
         var _pathname = _this.pathname,
             _query = _this.query;
 
-        _this.changeState('replaceState', url_1.format({
+        _this.changeState('replaceState', utils_1.formatWithValidation({
           pathname: _pathname,
           query: _query
         }), utils_1.getURL());
@@ -4463,7 +4507,7 @@ function () {
     if (typeof window !== 'undefined') {
       // in order for `e.state` to work on the `onpopstate` event
       // we have to register the initial route upon initialization
-      this.changeState('replaceState', url_1.format({
+      this.changeState('replaceState', utils_1.formatWithValidation({
         pathname: pathname,
         query: query
       }), as);
@@ -4596,8 +4640,8 @@ function () {
               case 0:
                 // If url and as provided as an object representation,
                 // we'll format them into the string version here.
-                url = (0, _typeof2.default)(_url) === 'object' ? url_1.format(_url) : _url;
-                as = (0, _typeof2.default)(_as) === 'object' ? url_1.format(_as) : _as; // Add the ending slash to the paths. So, we can serve the
+                url = (0, _typeof2.default)(_url) === 'object' ? utils_1.formatWithValidation(_url) : _url;
+                as = (0, _typeof2.default)(_as) === 'object' ? utils_1.formatWithValidation(_as) : _as; // Add the ending slash to the paths. So, we can serve the
                 // "<page>/index.html" directly for the SSR page.
 
                 if (__NEXT_DATA__.nextExport) {
@@ -5246,11 +5290,17 @@ var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/help
 
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "../node_modules/@babel/runtime-corejs2/regenerator/index.js"));
 
+var _keys = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "../node_modules/@babel/runtime-corejs2/core-js/object/keys.js"));
+
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/typeof */ "../node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js"));
+
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "../node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js"));
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var url_1 = __webpack_require__(/*! url */ "../node_modules/url/url.js");
 
 function execOnce(fn) {
   var _this = this;
@@ -5368,12 +5418,29 @@ function _loadGetInitialProps() {
             return _context.stop();
         }
       }
-    }, _callee, this);
+    }, _callee);
   }));
   return _loadGetInitialProps.apply(this, arguments);
 }
 
 exports.loadGetInitialProps = loadGetInitialProps;
+exports.urlObjectKeys = ['auth', 'hash', 'host', 'hostname', 'href', 'path', 'pathname', 'port', 'protocol', 'query', 'search', 'slashes'];
+
+function formatWithValidation(url, options) {
+  if (true) {
+    if (url !== null && (0, _typeof2.default)(url) === 'object') {
+      (0, _keys.default)(url).forEach(function (key) {
+        if (!exports.urlObjectKeys.includes(key)) {
+          console.warn("Unknown key passed via urlObject into url.format: ".concat(key));
+        }
+      });
+    }
+  }
+
+  return url_1.format(url, options);
+}
+
+exports.formatWithValidation = formatWithValidation;
 
 /***/ }),
 
@@ -5775,9 +5842,11 @@ function (_react_1$Component) {
         }, _callee, this);
       }));
 
-      return function getInitialProps(_x) {
+      function getInitialProps(_x) {
         return _getInitialProps.apply(this, arguments);
-      };
+      }
+
+      return getInitialProps;
     }()
   }]);
   return App;
@@ -6633,12 +6702,12 @@ module.exports = __webpack_require__(/*! ./dist/client/router */ "../node_module
 
 /***/ "../node_modules/object-assign/index.js":
 /*!****************************************************************************************************!*\
-  !*** delegated ../node_modules/object-assign/index.js from dll-reference dll_cc29e6f44d457075e034 ***!
+  !*** delegated ../node_modules/object-assign/index.js from dll-reference dll_31e0bf5b6c173a721e36 ***!
   \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_cc29e6f44d457075e034 */ "dll-reference dll_cc29e6f44d457075e034"))("../node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_31e0bf5b6c173a721e36 */ "dll-reference dll_31e0bf5b6c173a721e36"))("../node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -7390,7 +7459,7 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "../nod
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.8.2
+/** @license React v16.8.3
  * react-is.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -7640,12 +7709,12 @@ if (false) {} else {
 
 /***/ "../node_modules/react/index.js":
 /*!********************************************************************************************!*\
-  !*** delegated ../node_modules/react/index.js from dll-reference dll_cc29e6f44d457075e034 ***!
+  !*** delegated ../node_modules/react/index.js from dll-reference dll_31e0bf5b6c173a721e36 ***!
   \********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_cc29e6f44d457075e034 */ "dll-reference dll_cc29e6f44d457075e034"))("../node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_31e0bf5b6c173a721e36 */ "dll-reference dll_31e0bf5b6c173a721e36"))("../node_modules/react/index.js");
 
 /***/ }),
 
@@ -8921,7 +8990,7 @@ Url.prototype.resolveObject = function(relative) {
         result[rkey] = relative[rkey];
     }
 
-    //urlParse appends trailing / to urls like http://www.example.com
+    //urlParse appends trailing / to urls like http://www.moonstash.io
     if (slashedProtocol[result.protocol] &&
         result.hostname && !result.pathname) {
       result.path = result.pathname = '/';
@@ -9203,12 +9272,12 @@ module.exports = {
 
 /***/ "../node_modules/webpack/buildin/global.js":
 /*!*******************************************************************************************************!*\
-  !*** delegated ../node_modules/webpack/buildin/global.js from dll-reference dll_cc29e6f44d457075e034 ***!
+  !*** delegated ../node_modules/webpack/buildin/global.js from dll-reference dll_31e0bf5b6c173a721e36 ***!
   \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_cc29e6f44d457075e034 */ "dll-reference dll_cc29e6f44d457075e034"))("../node_modules/webpack/buildin/global.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_31e0bf5b6c173a721e36 */ "dll-reference dll_31e0bf5b6c173a721e36"))("../node_modules/webpack/buildin/global.js");
 
 /***/ }),
 
@@ -9245,14 +9314,14 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "dll-reference dll_cc29e6f44d457075e034":
+/***/ "dll-reference dll_31e0bf5b6c173a721e36":
 /*!*******************************************!*\
-  !*** external "dll_cc29e6f44d457075e034" ***!
+  !*** external "dll_31e0bf5b6c173a721e36" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_cc29e6f44d457075e034;
+module.exports = dll_31e0bf5b6c173a721e36;
 
 /***/ })
 
