@@ -8990,7 +8990,7 @@ Url.prototype.resolveObject = function(relative) {
         result[rkey] = relative[rkey];
     }
 
-    //urlParse appends trailing / to urls like http://https://www.moonstash.io
+    //urlParse appends trailing / to urls like http://www.moonstash.io
     if (slashedProtocol[result.protocol] &&
         result.hostname && !result.pathname) {
       result.path = result.pathname = '/';
