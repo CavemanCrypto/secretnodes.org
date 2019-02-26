@@ -11616,7 +11616,7 @@ exports.normalize = normalize;
  *   is returned.
  *   - If aPath is absolute, the result is aPath.
  *   - Otherwise the two paths are joined with a slash.
- * - Joining for example 'http://' and 'www.example.com' is also supported.
+ * - Joining for example 'http://' and 'https://www.moonstash.io' is also supported.
  */
 function join(aRoot, aPath) {
   if (aRoot === "") {
@@ -11643,7 +11643,7 @@ function join(aRoot, aPath) {
     return aPath;
   }
 
-  // `join('http://', 'www.example.com')`
+  // `join('http://', 'https://www.moonstash.io')`
   if (aRootUrl && !aRootUrl.host && !aRootUrl.path) {
     aRootUrl.host = aPath;
     return urlGenerate(aRootUrl);
@@ -18762,7 +18762,7 @@ Url.prototype.resolveObject = function(relative) {
         result[rkey] = relative[rkey];
     }
 
-    //urlParse appends trailing / to urls like http://www.example.com
+    //urlParse appends trailing / to urls like http://https://www.moonstash.io
     if (slashedProtocol[result.protocol] &&
         result.hostname && !result.pathname) {
       result.path = result.pathname = '/';
