@@ -74,7 +74,7 @@ const PageFooter = props => {
           <span className='span-copyright'>secretnodes.org©</span>
           <span className='secret-nodes-motto'>empowering people to secure the privacy layer of the web since 2018</span>
         </div>
-				<span className='special-span'><a href='https://www.moonstash.io' rel='noopener noreferrer'>built by 🐉s at the moonstash think tank</a></span>
+				<span className='special-span'><a href='https://www.moonstash.io' rel='noopener noreferrer'>built by the moonstash think tank</a></span>
       </div>
     </Footer>
   )
