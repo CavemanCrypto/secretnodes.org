@@ -72,7 +72,7 @@ const PageFooter = props => {
         <div className='logo-wrapper'>
           <img className='secret-nodes-logo' src='/static/favicon.png' alt='' />
           <span className='span-copyright'>secretnodes.org©</span>
-          <span className='secret-nodes-motto'>empowering people to secure the privacy layer of the web since 2018</span>
+          <span className='secret-nodes-motto'>2018 - 2019</span>
         </div>
 				<span className='special-span'><a href='https://www.moonstash.io' rel='noopener noreferrer'>built by the moonstash think tank</a></span>
       </div>
