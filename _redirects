@@ -1,0 +1,5 @@
+# Redirect default Netlify subdomain to primary domain
+https://secretnodes.netlify.com/* https://www.secretnodes.org/:splat 301!
+
+# Redirect naked domain to primary domain
+https://secretnodes.org/* https://www.secretnodes.org/:splat 301!
