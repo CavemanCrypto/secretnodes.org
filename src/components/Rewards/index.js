@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
-
-import TextContainer from '../../styled/TextContainer'
+import { TextContainer } from '../styled'
 
 const RewardsSection = props => {
   const Rewards = styled('section')({

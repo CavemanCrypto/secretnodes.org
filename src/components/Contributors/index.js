@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import AvatarContainer from '../../styled/AvatarContainer'
+import { AvatarContainer } from '../styled'
 
 const Contributors = props => {
   const ContributorsSection = styled('section')({

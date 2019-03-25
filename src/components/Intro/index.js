@@ -1,4 +1,4 @@
-import ButtonPrimary from '../../styled/Button'
+import { ButtonPrimary } from '../styled'
 import styled from '@emotion/styled'
 
 const Intro = props => {
