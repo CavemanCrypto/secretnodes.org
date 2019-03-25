@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import styled from '@emotion/styled'
 
-export default class NavBar extends React.Component {
+export default class Header extends React.Component {
   constructor () {
     super()
     this.state = {
@@ -39,7 +39,7 @@ export default class NavBar extends React.Component {
 	}
 
 	render () {
-	  const Nav = styled('nav')({
+	  const Header = styled('Header')({
 	    '#dropdown-menu > div:hover': {
 	      border: '1px solid'
 	    },
@@ -165,45 +165,90 @@ export default class NavBar extends React.Component {
 	 })
 	 const toggleFlexAlignment = this.state.showMenu ? 'flex-start' : 'center'
 	 const responsiveMenuDisplay = typeof window !== 'undefined' && window.innerWidth <= 320 ? '68px' : '10px'
-	 const moreShit = typeof window !== 'undefined' && window.innerWidth >=740 ? '315px' : '252px'
+     const moreShit = typeof window !== 'undefined' && window.innerWidth >=740 ? '315px' : '252px'
+     const showDropdown = ['/privacy-policy', '/_error'].includes(this.props.url.pathname) ? 'none' : ''
 	  return (
-  <Nav style={{ alignItems: toggleFlexAlignment }}>
-  <Link href='/'>
-  <div className='logo-wrapper'>
-      <img src='/static/favicon.png' alt='' />
-	          <span>secretnodes.org</span>
-	        </div>
-</Link>
-	      <div style={{ display: ['/privacy-policy', '/_error'].includes(this.props.url.pathname) ? 'none' : '', height: moreShit }} className='dropdown-menu-container'>
-					<img onClick={this.dropdownHandler} style={{marginRight: this.state.showMenu ? responsiveMenuDisplay : '10px'}} src='/static/menu-icon.svg' id='menu-icon' aria-haspopup='true' aria-expanded={this.state.showMenu ? 'true' : 'false'} aria-controls='dropdown-menu' />
-      {
+        <Header style={{ alignItems: toggleFlexAlignment }}>
+        <Link href='/'>
+        <div className='logo-wrapper'>
+          <img src='/static/favicon.png' alt='' />
+          <span>secretnodes.org</span>
+        </div>
+        </Link>
+	      <div style={{ display: showDropdown,  height: moreShit }} className='dropdown-menu-container'>
+            <img 
+              onClick={this.dropdownHandler}
+              style={{marginRight: this.state.showMenu ? responsiveMenuDisplay : '10px'}}
+              src='/static/menu-icon.svg'
+              id='menu-icon'
+              aria-label='submenu'
+              role='menuitem'
+              tabindex='0'
+              aria-haspopup='true'
+              aria-expanded={this.state.showMenu ? 'false' : 'true'}
+              aria-controls='dropdown-menu'
+            />
+            {
 	          this.state.showMenu
-	            ?								<ul id='dropdown-menu' role='menu' aria-labelledby='menu-icon' style={{ background: this.state.showMenu ? 'rgb(79, 133, 182)' : '' }}>
-	              <Link href='#secret-nodes'><div className='styled-menu'><li role='menuitem'>Secret Nodes</li></div></Link>
-  <Link href='#rewards'><div className='styled-menu'><li role='menuitem'>Rewards</li></div></Link>
-	              <Link href='#contributors'><div className='styled-menu'><li role='menuitem'> Contributors</li></div></Link>
-  <Link href='/privacy-policy'><div className='styled-menu'><li role='menuitem'>Privacy Policy</li></div></Link>
-	                <li className='twitter-icon-container'>
-	                  <a href='https://twitter.com/secretnodes' rel='noopener noreferrer'>
-    <img className='twitter-icon' src='/static/twitter.png' alt='' />
-  </a>
-  </li>
-	            </ul>
-	            :								null
+                ?  <nav>
+                    <ul
+                      id='dropdown-menu'
+                      role='menu'
+                      aria-labelledby='menu-icon'
+                      style={{ background: this.state.showMenu ? 'rgb(79, 133, 182)' : '' }}
+                    >
+                      <Link href='#secret-nodes'>
+                        <div className='styled-menu'>
+                          <li role='menuitem'>Secret Nodes</li>
+                        </div>
+                      </Link>
+                      <Link href='#rewards'>
+                        <div className='styled-menu'>
+                          <li role='menuitem'>Rewards</li>
+                        </div>
+                      </Link>
+                      <Link href='#contributors'>
+                        <div className='styled-menu'>
+                          <li role='menuitem'>Contributors</li>
+                        </div>
+                      </Link>
+                      <Link href='/privacy-policy'>
+                        <div className='styled-menu'>
+                          <li role='menuitem'>Privacy Policy</li>
+                        </div>
+                      </Link>
+                      <li className='twitter-icon-container'>
+                        <img
+                          role='link'
+                          className='twitter-icon'
+                          href='https://twitter.com/secretnodes'
+                          src='/static/twitter.png'
+                          alt='Follow us on Twitter'
+                        />
+                      </li>
+                    </ul>
+                  </nav>
+              :  null
 	        }
-	      </div>
-	      <ul id='regular-menu' style={{ display: ['/privacy-policy', '/_error'].includes(this.props.url.pathname) ? 'none' : '' }} >
-      <Link href='#secret-nodes'><li>Secret Nodes</li></Link>
-      <Link href='#rewards'><li>Rewards</li></Link>
-      <Link href='#contributors'><li>Contributors</li></Link>
-      <Link href='/privacy-policy'><li>Privacy Policy</li></Link>
-  <li className='twitter-icon-container'>
-  <a href='https://twitter.com/secretnodes' rel='noopener noreferrer'>
-  <img className='twitter-icon' src='/static/twitter.png' alt='' />
-	            </a>
-	          </li>
-    </ul>
-	    </Nav>
+          </div>
+          <nav>
+            <ul id='regular-menu' style={{ display: showDropdown }} >
+              <Link href='#secret-nodes'><li role='link'>Secret Nodes</li></Link>
+              <Link href='#rewards'><li role='link'>Rewards</li></Link>
+              <Link href='#contributors'><li role='link'>Contributors</li></Link>
+              <Link href='/privacy-policy'><li role='link'>Privacy Policy</li></Link>
+              <li className='twitter-icon-container'>
+                <img
+                  className='twitter-icon'
+                  role='link'
+                  href='https://twitter.com/secretnodes'
+                  src='/static/twitter.png'
+                  alt='Follow us on Twitter'
+                />
+              </li>
+            </ul>
+          </nav>
+	    </Header>
 	  )
 	}
 }

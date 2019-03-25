@@ -1,9 +1,9 @@
 import  { ContentContainer } from '../styled'
-import { NavBar, Footer } from '../'
+import { Header, Footer } from '../'
 
 const Layout = props =>
   <div>
-    <NavBar {...props} mediaQueries={props.mediaQueries} />
+    <Header {...props} mediaQueries={props.mediaQueries} />
     <ContentContainer>
       {props.children}
     </ContentContainer>
