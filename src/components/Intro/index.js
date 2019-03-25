@@ -93,7 +93,7 @@ const Intro = props => {
         <h1>Securing the<br /> privacy layer of the internet.</h1>
         <p>We're a community-led group of individuals who care about privacy, data ownership, and are dedicated to supporting secret node runners.</p>
         <div className='button-container'>
-          <a href='https://t.me/secretnodes' rel='noopener noreferrer'>
+          <a href='https://t.me/secretnodes'>
             <ButtonPrimary mediaQueries={props.mediaQueries}>
               <img className='telegram-icon' src='./static/telegram_icon.png' />
               Join Our Telegram

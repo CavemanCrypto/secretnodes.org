@@ -29,9 +29,6 @@ const Contributors = props => {
       },
       '.contributors-container': {
         padding: '0 20px'
-      },
-      '.contributors-container': {
-        padding: 0
       }
     }
   })
@@ -40,10 +37,10 @@ const Contributors = props => {
     <ContributorsSection id='contributors'>
       <h1>Contributors</h1>
       <div className='contributors-container'>
-        <AvatarContainer src='/static/ian.png' name='Ian' role='Node Magician' mediaQueries={props.mediaQueries} />
-        <AvatarContainer src='/static/celeste.png' name='Celeste' role='Privacy Advocate and Expert' mediaQueries={props.mediaQueries} />
-        <AvatarContainer src='/static/tor.png' name='Tor' role='Enigma Liaison' mediaQueries={props.mediaQueries} />
-        <AvatarContainer src='/static/krista.png' name='Krista' role='Front End Dev' mediaQueries={props.mediaQueries} />
+        <AvatarContainer alt='' src='/static/ian.png' name='Ian' role='Node Magician' mediaQueries={props.mediaQueries} />
+        <AvatarContainer alt='' src='/static/celeste.png' name='Celeste' role='Privacy Advocate and Expert' mediaQueries={props.mediaQueries} />
+        <AvatarContainer alt='' src='/static/tor.png' name='Tor' role='Enigma Liaison' mediaQueries={props.mediaQueries} />
+        <AvatarContainer alt='' src='/static/krista.png' name='Krista' role='Front End Dev' mediaQueries={props.mediaQueries} />
       </div>
     </ContributorsSection>
   )
