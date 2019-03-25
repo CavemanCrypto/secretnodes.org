@@ -39,7 +39,7 @@ export default class Header extends React.Component {
 	}
 
 	render () {
-	  const Header = styled('Header')({
+	  const Header = styled('header')({
 	    '#dropdown-menu > div:hover': {
 	      border: '1px solid'
 	    },
@@ -183,7 +183,7 @@ export default class Header extends React.Component {
               id='menu-icon'
               aria-label='submenu'
               role='menuitem'
-              tabindex='0'
+              tabIndex='0'
               aria-haspopup='true'
               aria-expanded={this.state.showMenu ? 'false' : 'true'}
               aria-controls='dropdown-menu'
