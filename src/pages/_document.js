@@ -1,4 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
+import { GlobalStyles } from '../components/styled'
 
 export default class MyDocument extends Document {
   static async getInitialProps (ctx) {
@@ -11,9 +12,10 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' />
-          <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+          <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no' />
+          <GlobalStyles />
         </Head>
-        <body className='custom-class'>
+        <body>
           <Main />
           <NextScript />
         </body>
