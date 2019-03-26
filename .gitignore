@@ -61,7 +61,7 @@ typings/
 
 # next.js build output
 .next
-out
+*/out
 build
 .next-export
 

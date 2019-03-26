@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { GlobalStyles } from '../components/styled'
 
 export default class MyDocument extends Document {
   static async getInitialProps (ctx) {
@@ -17,9 +16,8 @@ export default class MyDocument extends Document {
             name='description'
             content='Securing the privacy layer of the internet. We are a community-led group of individuals who care about privacy, data ownership, and are dedicated to supporting secret node runners.'
           />
-          <GlobalStyles />
         </Head>
-        <body>
+        <body className='custom_class'>
           <Main />
           <NextScript />
         </body>
