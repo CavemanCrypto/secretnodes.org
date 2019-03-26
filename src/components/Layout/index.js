@@ -1,4 +1,4 @@
-import  { ContentContainer } from '../styled'
+import { ContentContainer } from '../styled'
 import { Header, Footer } from '../'
 
 const Layout = props =>

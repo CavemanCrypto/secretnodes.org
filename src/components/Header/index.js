@@ -166,7 +166,7 @@ export default class Header extends React.Component {
 	 const toggleFlexAlignment = this.state.showMenu ? 'flex-start' : 'center'
 	 const responsiveMenuDisplay = typeof window !== 'undefined' && window.innerWidth <= 320 ? '68px' : '10px'
      const moreShit = typeof window !== 'undefined' && window.innerWidth >=740 ? '315px' : '252px'
-     const showDropdown = ['/privacy-policy', '/_error'].includes(this.props.url.pathname) ? 'none' : ''
+     const showDropdown = ['/privacy-policy', '/_error'].includes(this.props.url.pathname) ? 'hidden' : 'visible'
 	  return (
         <Header style={{ alignItems: toggleFlexAlignment }}>
         <Link href='/'>
@@ -175,7 +175,7 @@ export default class Header extends React.Component {
           <span>secretnodes.org</span>
         </div>
         </Link>
-	      <div style={{ display: showDropdown,  height: moreShit }} className='dropdown-menu-container'>
+	      <div style={{ flexBasis: '100%', visibility: showDropdown,  height: moreShit }} className='dropdown-menu-container'>
             <img 
               onClick={this.dropdownHandler}
               style={{marginRight: this.state.showMenu ? responsiveMenuDisplay : '10px'}}
