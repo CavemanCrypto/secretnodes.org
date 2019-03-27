@@ -1,7 +1,7 @@
 # Welcome to secretnodes.org's Codebase
 
 ### Donations
-secretnodes.org is community supported: 0xE41EE21B153D81860bEF2d433ac4EfAa791d8677
+secretnodes.org is community supported: 0x2748dFc1789708D4C1ADd5a899db48FA86e1a4d2
 
 ### Questions?
-Please contact us (admin@secretnodes.org) if you need help.
+Please contact us (hello@secretnodes.org) if you need help.
