@@ -6,9 +6,9 @@ const CalculatorOutput = props => {
 
   const calculateDaily = (inputValues, days = 1) => {
     // Assume 30 days in a month for simplicity
-    const daysInMonth = 30.0
-    const dailyCost = inputValues.monthlyNodeCost / daysInMonth
-    const dailyRewards = constantValues.monthlyRewards / daysInMonth
+    const daysInYear = 365.0
+    const dailyCost = inputValues.yearlyNodeCost / daysInYear
+    const dailyRewards = constantValues.yearlyRewards / daysInYear
     const dailyEngEarned = dailyRewards * (inputValues.nodeStake / inputValues.totalGenisisNodeStake)
     const dailyRevenue = dailyEngEarned * inputValues.engPrice
     const dailyProfit = dailyRevenue - dailyCost
@@ -27,23 +27,16 @@ const CalculatorOutput = props => {
     return {
       daily: calculateDaily(props.inputValues),
       weekly: calculateDaily(props.inputValues, 7),
-      monthly: calculateDaily(props.inputValues, 30),
+      monthly: calculateDaily(props.inputValues, 30.416666),
       yearly: calculateDaily(props.inputValues, 365)
     }
   }
 
   const state = calculateAll()
 
-  const periods = [
-    'daily',
-    'weekly',
-    'monthly',
-    'yearly'
-  ]
-
   return (
     <div>
-      {periods.map(period => (
+      {Object.keys(state).map(period => (
         <table key={period}>
           <thead>
             <tr>
@@ -56,11 +49,11 @@ const CalculatorOutput = props => {
           </thead>
           <tbody>
             <tr>
-              <td>{numeral(state[period].roi).format('0,0.000')}</td>
-              <td>{numeral(state[period].earned).format('0,0.00')}</td>
-              <td>{numeral(state[period].revenue).format('0,0.00')}</td>
-              <td>{numeral(state[period].cost).format('0,0.00')}</td>
-              <td>{numeral(state[period].profit).format('0,0.00')}</td>
+              <td>{numeral(state[period].roi).format('(0.00 %)')}</td>
+              <td>{numeral(state[period].earned).format('$0,0.00')}</td>
+              <td>{numeral(state[period].revenue).format('$0,0.00')}</td>
+              <td>{numeral(state[period].cost).format('$0,0.00')}</td>
+              <td>{numeral(state[period].profit).format('$0,0.00')}</td>
             </tr>
           </tbody>
         </table>
