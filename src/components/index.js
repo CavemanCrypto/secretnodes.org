@@ -1,3 +1,4 @@
+import Calculator from './Calculator'
 import Contributors from './Contributors'
 import Footer from './Footer'
 import Intro from './Intro'
@@ -7,6 +8,7 @@ import Overview from './Overview'
 import Rewards from './Rewards'
 
 export {
+  Calculator,
   Contributors,
   Footer,
   Intro,

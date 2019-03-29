@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import {
+  Calculator,
   Contributors,
   Layout,
   Intro,
@@ -25,6 +26,7 @@ export default class Index extends React.Component {
         <Intro mediaQueries={mq} />
         <Overview mediaQueries={mq} />
         <Rewards mediaQueries={mq} />
+        <Calculator />
         <Contributors mediaQueries={mq} />
       </Layout>
     )
