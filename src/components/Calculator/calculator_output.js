@@ -44,7 +44,7 @@ const CalculatorOutput = props => {
   return (
     <div>
       {periods.map(period => (
-        <table>
+        <table key={period}>
           <thead>
             <tr>
               <th>{upperFirst(period)} ROI</th>

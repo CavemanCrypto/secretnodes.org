@@ -36,6 +36,7 @@ const Calculator = props => {
         <div>
           {Object.keys(inputs).map(k => (
             <CalculatorInput
+              key={k}
               max={maxInputValues[k] || 100.0}
               onChange={calculate}
               title={k}
@@ -46,7 +47,9 @@ const Calculator = props => {
         <div>
           {Object.keys(constantValues).map(k => (
             <CalculatorInput
+              key={k}
               disabled
+              formatValue
               max={constantValues[k]}
               title={k}
               value={constantValues[k]}

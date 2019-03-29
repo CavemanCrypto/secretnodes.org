@@ -4,7 +4,9 @@ import numeral from 'numeral'
 import startCase from 'lodash.startcase'
 
 const CalculatorInput = (props) => {
-  const { title, value, max, disabled = false } = props
+  const { title, value, max, disabled = false, formatValue = false } = props
+  const displayValue = formatValue ? numeral(value).format('0,0.00') : value || null
+
   return (
     <div>
       <h3>{startCase(title)}</h3>
@@ -16,7 +18,7 @@ const CalculatorInput = (props) => {
       />
       <Input
         onChange={(e) => { props.onChange({ [title]: e.target.value }) }}
-        value={numeral(value).format('0,0.00')}
+        value={displayValue}
         disabled={disabled}
       />
     </div>
