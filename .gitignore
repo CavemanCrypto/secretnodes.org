@@ -68,3 +68,6 @@ build
 # misc
 *.js.swp
 .DS_Store
+
+# inteliJ
+.idea
