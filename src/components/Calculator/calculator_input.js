@@ -4,25 +4,26 @@ import numeral from 'numeral'
 import startCase from 'lodash.startcase'
 import styled from '@emotion/styled'
 
+const CalculatorInputSection = styled('section')({
+  '.field': {
+    display: 'flex'
+  },
+  '.field-input': {
+    display: 'block',
+    width: '100%'
+  },
+  '.text-input': {
+    position: 'relative',
+    top: '-20px',
+    padding: '0 15px'
+  }
+})
+
+const shouldFormatCurrency = title => title.includes('Price') || title.includes('Cost')
+
 const CalculatorInput = (props) => {
-  const CalculatorInputSection = styled('section')({
-    '.field': {
-      display: 'flex'
-    },
-    '.field-input': {
-      display: 'block',
-      width: '100%'
-    },
-    '.text-inputs': {
-      position: 'relative',
-      top: '-20px',
-      padding: '0 15px'
-    }
-  })
   const { title, value, max, disabled = false, formatValue = false } = props
   const displayValue = formatValue ? numeral(value).format('0,0.00') : value || null
-
-  const shouldFormatCurrency = title => title.includes('Price') || title.includes('Cost')
 
   return (
     <CalculatorInputSection>
@@ -36,7 +37,7 @@ const CalculatorInput = (props) => {
             disabled={disabled}
           />
         </div>
-        <div className='field-input text-inputs'>
+        <div className='field-input text-input'>
           {shouldFormatCurrency(title) && <span>$</span>}
           <Input
             onChange={(e) => { props.onChange({ [title]: e.target.value }) }}

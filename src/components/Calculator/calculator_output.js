@@ -1,34 +1,34 @@
 import numeral from 'numeral'
 import upperFirst from 'lodash.upperfirst'
 
+const calculateDaily = (inputValues, constantValues, days = 1) => {
+  // Assume 30 days in a month for simplicity
+  const daysInYear = 365.0
+  const dailyCost = inputValues.yearlyNodeCost / daysInYear
+  const dailyRewards = constantValues.yearlyRewards / daysInYear
+  const dailyEngEarned = dailyRewards * (inputValues.nodeStake / inputValues.totalGenisisNodeStake)
+  const dailyRevenue = dailyEngEarned * inputValues.engPrice
+  const dailyProfit = dailyRevenue - dailyCost
+  const dailyReturn = dailyEngEarned / inputValues.nodeStake
+
+  return {
+    roi: dailyReturn * days,
+    earned: dailyEngEarned * days,
+    revenue: dailyRevenue * days,
+    cost: dailyCost * days,
+    profit: dailyProfit * days
+  }
+}
+
 const CalculatorOutput = props => {
   const { constantValues } = props
 
-  const calculateDaily = (inputValues, days = 1) => {
-    // Assume 30 days in a month for simplicity
-    const daysInYear = 365.0
-    const dailyCost = inputValues.yearlyNodeCost / daysInYear
-    const dailyRewards = constantValues.yearlyRewards / daysInYear
-    const dailyEngEarned = dailyRewards * (inputValues.nodeStake / inputValues.totalGenisisNodeStake)
-    const dailyRevenue = dailyEngEarned * inputValues.engPrice
-    const dailyProfit = dailyRevenue - dailyCost
-    const dailyReturn = dailyEngEarned / inputValues.nodeStake
-
-    return {
-      roi: dailyReturn * days,
-      earned: dailyEngEarned * days,
-      revenue: dailyRevenue * days,
-      cost: dailyCost * days,
-      profit: dailyProfit * days
-    }
-  }
-
   const calculateAll = () => {
     return {
-      daily: calculateDaily(props.inputValues),
-      weekly: calculateDaily(props.inputValues, 7),
-      monthly: calculateDaily(props.inputValues, 30.416666),
-      yearly: calculateDaily(props.inputValues, 365)
+      daily: calculateDaily(props.inputValues, constantValues),
+      weekly: calculateDaily(props.inputValues, constantValues, 7),
+      monthly: calculateDaily(props.inputValues, constantValues, 30.416666),
+      yearly: calculateDaily(props.inputValues, constantValues, 365)
     }
   }
 

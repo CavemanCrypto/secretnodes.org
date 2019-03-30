@@ -4,30 +4,30 @@ import { useState } from 'react'
 import CalculatorInput from './calculator_input'
 import CalculatorOutput from './calculator_output'
 
-const Calculator = props => {
-  const CalculatorSection = styled('section')({
-    h1: {
-      marginLeft: 41,
-      textAlign: 'center'
-    },
-    '.role-container': {
-      marginLeft: 20
-    },
-    '.calculator-container': {
-      display: 'block',
-      alignItems: 'center',
-      flexWrap: 'wrap',
-      padding: '0 40px',
-      justifyContent: 'center'
-    },
-    letterSpacing: '.6px',
-    height: 'auto',
-    width: '100%',
-    background: '#060b47',
-    color: '#fbfbfd',
-    minHeight: 300
-  })
+const CalculatorSection = styled('section')({
+  h1: {
+    marginLeft: 41,
+    textAlign: 'center'
+  },
+  '.role-container': {
+    marginLeft: 20
+  },
+  '.calculator-container': {
+    display: 'block',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    padding: '0 40px',
+    justifyContent: 'center'
+  },
+  letterSpacing: '.6px',
+  height: 'auto',
+  width: '100%',
+  background: '#060b47',
+  color: '#fbfbfd',
+  minHeight: 300
+})
 
+const Calculator = props => {
   const constantValues = {
     engCirculatingSupply: 75000000.0,
     totalStakedPercent: 13.33,
