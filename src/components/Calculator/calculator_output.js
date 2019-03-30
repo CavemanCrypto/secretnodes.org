@@ -40,12 +40,12 @@ const CalculatorOutput = props => {
 
   const state = calculateAll()
 
-  const period = 'daily'
   return (
     <CalculatorOutputSection>
       <Table>
         <TableHead>
           <TableRow>
+            <TableCell>Period</TableCell>
             <TableCell>ROI</TableCell>
             <TableCell>ENG Earned</TableCell>
             <TableCell>Revenue</TableCell>
@@ -57,6 +57,7 @@ const CalculatorOutput = props => {
           {Object.keys(state).map(period => {
             return (
               <TableRow>
+                <TableCell>{upperFirst(period)}</TableCell>
                 <TableCell>{numeral(state[period].roi).format('(0.00 %)')}</TableCell>
                 <TableCell>{numeral(state[period].earned).format('$0,0.00')}</TableCell>
                 <TableCell>{numeral(state[period].revenue).format('$0,0.00')}</TableCell>
