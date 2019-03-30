@@ -74,8 +74,8 @@ const Calculator = props => {
   const maxInputValues = {
     totalGenisisNodeStake: 150000000.0,
     totalStakedPercent: 100.0,
-    nodeStake: 150000000.0,
-    engPrice: 100000.0,
+    nodeStake: 500000.0,
+    engPrice: 10.0,
     yearlyNodeCost: 10000.0
   }
 
