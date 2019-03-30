@@ -20,6 +20,7 @@ const CalculatorInputSection = styled('section')({
 })
 
 const shouldFormatCurrency = title => title.includes('Price') || title.includes('Cost')
+const shouldFormatPercent = title => title.includes('Percent')
 
 const CalculatorInput = (props) => {
   const { title, value, max, disabled = false, formatValue = false } = props
@@ -44,6 +45,7 @@ const CalculatorInput = (props) => {
             value={displayValue}
             disabled={disabled}
           />
+          {shouldFormatPercent(title) && <span>%</span>}
         </div>
       </div>
     </CalculatorInputSection>

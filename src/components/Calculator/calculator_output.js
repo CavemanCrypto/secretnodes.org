@@ -1,8 +1,16 @@
 import numeral from 'numeral'
+import styled from '@emotion/styled'
+import Table from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody'
+import TableCell from '@material-ui/core/TableCell'
+import TableHead from '@material-ui/core/TableHead'
+import TableRow from '@material-ui/core/TableRow'
 import upperFirst from 'lodash.upperfirst'
 
+const CalculatorOutputSection = styled('section')({
+})
+
 const calculateDaily = (inputValues, constantValues, days = 1) => {
-  // Assume 30 days in a month for simplicity
   const daysInYear = 365.0
   const dailyCost = inputValues.yearlyNodeCost / daysInYear
   const dailyRewards = constantValues.yearlyRewards / daysInYear
@@ -23,42 +31,43 @@ const calculateDaily = (inputValues, constantValues, days = 1) => {
 const CalculatorOutput = props => {
   const { constantValues } = props
 
-  const calculateAll = () => {
-    return {
-      daily: calculateDaily(props.inputValues, constantValues),
-      weekly: calculateDaily(props.inputValues, constantValues, 7),
-      monthly: calculateDaily(props.inputValues, constantValues, 30.416666),
-      yearly: calculateDaily(props.inputValues, constantValues, 365)
-    }
-  }
+  const calculateAll = () => ({
+    daily: calculateDaily(props.inputValues, constantValues),
+    weekly: calculateDaily(props.inputValues, constantValues, 7),
+    monthly: calculateDaily(props.inputValues, constantValues, 30.416666),
+    yearly: calculateDaily(props.inputValues, constantValues, 365)
+  })
 
   const state = calculateAll()
 
+  const period = 'daily'
   return (
-    <div>
-      {Object.keys(state).map(period => (
-        <table key={period}>
-          <thead>
-            <tr>
-              <th>{upperFirst(period)} ROI</th>
-              <th>{upperFirst(period)} ENG Earned</th>
-              <th>{upperFirst(period)} Revenue</th>
-              <th>{upperFirst(period)} Node Cost</th>
-              <th>{upperFirst(period)} Profit</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{numeral(state[period].roi).format('(0.00 %)')}</td>
-              <td>{numeral(state[period].earned).format('$0,0.00')}</td>
-              <td>{numeral(state[period].revenue).format('$0,0.00')}</td>
-              <td>{numeral(state[period].cost).format('$0,0.00')}</td>
-              <td>{numeral(state[period].profit).format('$0,0.00')}</td>
-            </tr>
-          </tbody>
-        </table>
-      ))}
-    </div>
+    <CalculatorOutputSection>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>ROI</TableCell>
+            <TableCell>ENG Earned</TableCell>
+            <TableCell>Revenue</TableCell>
+            <TableCell>Node Cost</TableCell>
+            <TableCell>Profit</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {Object.keys(state).map(period => {
+            return (
+              <TableRow>
+                <TableCell>{numeral(state[period].roi).format('(0.00 %)')}</TableCell>
+                <TableCell>{numeral(state[period].earned).format('$0,0.00')}</TableCell>
+                <TableCell>{numeral(state[period].revenue).format('$0,0.00')}</TableCell>
+                <TableCell>{numeral(state[period].cost).format('$0,0.00')}</TableCell>
+                <TableCell>{numeral(state[period].profit).format('$0,0.00')}</TableCell>
+              </TableRow>
+            )
+          })}
+        </TableBody>
+      </Table>
+    </CalculatorOutputSection>
   )
 }
 

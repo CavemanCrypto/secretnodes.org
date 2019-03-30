@@ -1,5 +1,7 @@
 import styled from '@emotion/styled'
 import { useState } from 'react'
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
+import {createMuiTheme} from '@material-ui/core/styles'
 
 import CalculatorInput from './calculator_input'
 import CalculatorOutput from './calculator_output'
@@ -25,6 +27,34 @@ const CalculatorSection = styled('section')({
   background: '#060b47',
   color: '#fbfbfd',
   minHeight: 300
+})
+
+const theme = createMuiTheme({
+  palette: {
+    background: {
+      paper: '#FFF',
+      default: '#FFF'
+    },
+    text: {
+      primary: '#FFF',
+      secondary: '#FFF',
+      disabled: '#FFF',
+      hint: '#FFF'
+    },
+    primary: {
+      main: '#E82E9D',
+      light: '#E82E9D',
+      dark: '#E82E9D',
+      contrastText: '#E82E9D'
+    },
+    secondary: {
+      main: '#FFF',
+      light: '#FFF',
+      dark: '#FFF',
+      contrastText: '#FFF',
+      color: '#FFF'
+    }
+  }
 })
 
 const Calculator = props => {
@@ -55,35 +85,37 @@ const Calculator = props => {
 
   return (
     <CalculatorSection id='calculator'>
-      <h1>Calculator</h1>
-      <div className={'calculator-container'}>
-        <div>
-          {Object.keys(inputs).map(k => (
-            <CalculatorInput
-              key={k}
-              max={maxInputValues[k] || 100.0}
-              onChange={calculate}
-              title={k}
-              value={inputs[k]}
-            />
-          ))}
+      <MuiThemeProvider theme={theme}>
+        <h1>Calculator</h1>
+        <div className={'calculator-container'}>
+          <div>
+            {Object.keys(inputs).map(k => (
+              <CalculatorInput
+                key={k}
+                max={maxInputValues[k] || 100.0}
+                onChange={calculate}
+                title={k}
+                value={inputs[k]}
+              />
+            ))}
+          </div>
+          <div>
+            {Object.keys(constantValues).map(k => (
+              <CalculatorInput
+                key={k}
+                disabled
+                formatValue
+                max={constantValues[k]}
+                title={k}
+                value={constantValues[k]}
+              />
+            ))}
+          </div>
+          <div>
+            <CalculatorOutput inputValues={inputs} constantValues={constantValues} />
+          </div>
         </div>
-        <div>
-          {Object.keys(constantValues).map(k => (
-            <CalculatorInput
-              key={k}
-              disabled
-              formatValue
-              max={constantValues[k]}
-              title={k}
-              value={constantValues[k]}
-            />
-          ))}
-        </div>
-        <div>
-          <CalculatorOutput inputValues={inputs} constantValues={constantValues} />
-        </div>
-      </div>
+      </MuiThemeProvider>
     </CalculatorSection>
   )
 }
