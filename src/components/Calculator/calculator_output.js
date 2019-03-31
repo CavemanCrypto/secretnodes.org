@@ -59,7 +59,7 @@ const CalculatorOutput = props => {
               <TableRow>
                 <TableCell>{upperFirst(period)}</TableCell>
                 <TableCell>{numeral(state[period].roi).format('(0.00 %)')}</TableCell>
-                <TableCell>{numeral(state[period].earned).format('0,0.00')}</TableCell>
+                <TableCell>{numeral(state[period].earned).format('0,0')}</TableCell>
                 <TableCell>{numeral(state[period].revenue).format('$0,0.00')}</TableCell>
                 <TableCell>{numeral(state[period].cost).format('$0,0.00')}</TableCell>
                 <TableCell>{numeral(state[period].profit).format('$0,0.00')}</TableCell>
