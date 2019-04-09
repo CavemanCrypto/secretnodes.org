@@ -60,7 +60,7 @@ const theme = createMuiTheme({
 const Calculator = props => {
   const constantValues = {
     engCirculatingSupply: 75000000.0,
-    totalStakedPercent: (totalGenisisNodeStake / engCirculatingSupply) * 100,
+    totalStakedPercent: 13.33,
     yearlyRewards: 62500.0 * 12
   }
 
