@@ -10,9 +10,13 @@
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@material-ui/core": "^3.9.2",
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
     "@material-ui/lab": "^3.0.0-alpha.30",
+    "@material-ui/styles": "^3.0.0-alpha.10",
+    "@material/radio": "^1.1.0",
     "@zeit/next-source-maps": "^0.0.3",
+    "currency-symbol-map": "^4.0.4",
     "fontfaceobserver": "^2.1.0",
     "lodash.startcase": "^4.4.0",
     "lodash.upperfirst": "^4.3.1",
@@ -20,7 +24,10 @@
     "node-sass": "^4.11.0",
     "numeral": "^2.0.6",
     "react": "^16.8.2",
+    "react-bootstrap-table": "^4.3.1",
+    "react-bootstrap-table-next": "^3.1.1",
     "react-dom": "^16.8.2",
+    "react-select-currency": "^1.0.7",
     "styled-jsx-plugin-sass": "^1.0.0"
   },
   "devDependencies": {

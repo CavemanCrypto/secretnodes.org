@@ -22,11 +22,12 @@ export default class Index extends React.Component {
       <Layout {...this.props} mediaQueries={mq}>
         <Head>
           <title>secretnodes.org</title>
+          <link href="/statics/react-bootstrap-table.css" rel="stylesheet" />
         </Head>
         <Intro mediaQueries={mq} />
         <Overview mediaQueries={mq} />
         <Rewards mediaQueries={mq} />
-        <Calculator />
+        <Calculator mediaQueries={mq}/>
         <Contributors mediaQueries={mq} />
       </Layout>
     )

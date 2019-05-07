@@ -4,7 +4,18 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import {createMuiTheme} from '@material-ui/core/styles'
 
 import CalculatorInput from './calculator_input'
-import CalculatorOutput from './calculator_output'
+import CalculatorOutput from './calculator_table'
+
+// Drop down menu widget:
+import IconButton from '@material-ui/core/IconButton';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import { withStyles } from '@material-ui/core/styles';
+
+// Currency methods:
+import getSymbolFromCurrency from 'currency-symbol-map'
+import currencySymbolMap from 'currency-symbol-map'
 
 const CalculatorSection = styled('section')({
   h1: {
@@ -18,7 +29,7 @@ const CalculatorSection = styled('section')({
     display: 'block',
     alignItems: 'center',
     flexWrap: 'wrap',
-    padding: '0 40px',
+    padding: '0 30px',
     justifyContent: 'center'
   },
   letterSpacing: '.6px',
@@ -26,14 +37,18 @@ const CalculatorSection = styled('section')({
   width: '100%',
   background: '#060b47',
   color: '#fbfbfd',
-  minHeight: 300
+  minHeight: 300,
+
 })
 
 const theme = createMuiTheme({
-  palette: {
-    background: {
-      paper: '#FFF',
-      default: '#FFF'
+    typography: {
+      useNextVariants: true,
+    },
+    palette: {
+      background: {
+        paper: '#FFF',
+        default: '#FFF'
     },
     text: {
       primary: '#FFF',
@@ -57,29 +72,141 @@ const theme = createMuiTheme({
   }
 })
 
+const options = [
+  ['USD'],
+  ['GBP'],
+  ['EUR'],
+  ['JPY'],
+  ['AUD'],
+];
+
+var menuItemSelected = options[0]
+
+const ITEM_HEIGHT = 100;
+
+class CurrencyMenu extends React.Component {
+
+  state = {
+    anchorEl: null,
+  };
+
+  handleClick = event => {
+    this.setState({ anchorEl: event.currentTarget });
+  };
+
+  handleClose = event => {
+    this.setState({ anchorEl: null })
+    const menuSelectionValue = event.nativeEvent.target.outerText // this does not work on Mozilla
+    if(menuSelectionValue == '') {
+      console.log("menuSelectionValue ERROR!")
+      return undefined
+    }
+	  menuItemSelected=menuSelectionValue
+  };
+
+  render() {
+    const { anchorEl } = this.state;
+    const open = Boolean(anchorEl);
+
+    return (
+      <div>
+        {menuItemSelected}
+        <IconButton
+          aria-label="More"
+          aria-owns={open ? 'long-menu' : undefined}
+          aria-haspopup="true"
+          onClick={this.handleClick}
+          color='primary'
+          label="currency"
+          background='rgba(0, 0, 0, .7)'
+        >
+          <MoreVertIcon/>
+        </IconButton>
+        <Menu
+          id="long-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={this.handleClose}
+          PaperProps={{
+            style: {
+              borderRadius: 10,
+              border: 0,
+              disableGutters: true,
+              background: 'rgba(0, 0, 0, .7)',
+              maxHeight: ITEM_HEIGHT * 4.5,
+              width: 'auto',
+              padding: '0px 10px',
+            },
+          }}
+        >
+          {options.map (option => (
+            <MenuItem
+              key={option}
+              selected={option === {menuItemSelected}}
+              onClick={this.handleClose}
+            >
+              {option}
+            </MenuItem>
+          ))}
+        </Menu>
+        {getSymbolFromCurrency(menuItemSelected)}
+      </div>
+    );
+  }
+}
+
 const Calculator = props => {
+
+  const keyList = [
+    'totalGenisisNodeStake',
+    'nodeStake',
+    'yearlyNodeCost',
+    'ENGPrice' ]
+
   const constantValues = {
     engCirculatingSupply: 75000000.0,
-    totalStakedPercent: 13.33,
+    totalStakedPercent: 3.33,
     yearlyRewards: 62500.0 * 12
   }
 
   const [inputs, setInputs] = useState({
-    totalGenisisNodeStake: 250000 * 50,
+    totalGenisisNodeStake: 10000000,
     nodeStake: 50000.0,
-    engPrice: 0.60,
-    yearlyNodeCost: 840.0
+    yearlyNodeCost: 600.0,
+    ENGPrice: 0.60
   })
 
-  const maxInputValues = {
-    totalGenisisNodeStake: 150000000.0,
-    totalStakedPercent: 100.0,
-    nodeStake: 500000.0,
-    engPrice: 10.0,
-    yearlyNodeCost: 10000.0
+  const formatValue = {
+    totalGenisisNodeStake: false,
+    nodeStake: false,
+    ENGPrice: false,
+    yearlyNodeCost: false
   }
 
-  const calculate = (updatedInputs) => {
+  const maxInputValues = {
+    totalGenisisNodeStake: 75000000,
+    totalStakedPercent: 100.0,
+    nodeStake: 500000.0,
+    ENGPrice: 10.0,
+    yearlyNodeCost: 1200.0
+  }
+
+  const minInputValues = {
+    totalGenisisNodeStake: 1250000,
+    totalStakedPercent: 0,
+    nodeStake: 0,
+    ENGPrice: 0,
+    yearlyNodeCost: 0
+  }
+
+  const stepValues = {
+    totalGenisisNodeStake: 1000,
+    nodeStake: 100,
+    ENGPrice: .01,
+    yearlyNodeCost: 1
+  }
+
+  const calculate = updatedInputs => {
     setInputs({ ...inputs, ...updatedInputs })
   }
 
@@ -89,35 +216,25 @@ const Calculator = props => {
         <h1>Calculator</h1>
         <div className={'calculator-container'}>
           <div>
-            {Object.keys(inputs).map(k => (
+            {keyList.map(k => (
               <CalculatorInput
                 key={k}
+                min={minInputValues[k] || 0}
                 max={maxInputValues[k] || 100.0}
+                step={stepValues[k] || 1}
                 onChange={calculate}
                 title={k}
                 value={inputs[k]}
+                formatValue={formatValue[k]}
               />
             ))}
-          </div>
-          <div>
-            {Object.keys(constantValues).map(k => (
-              <CalculatorInput
-                key={k}
-                disabled
-                formatValue
-                max={constantValues[k]}
-                title={k}
-                value={constantValues[k]}
-              />
-            ))}
-          </div>
-          <div>
-            <CalculatorOutput inputValues={inputs} constantValues={constantValues} />
+            {/*<CurrencyMenu />*/}
+            {<CalculatorOutput inputValues={inputs} constantValues={constantValues} currency={menuItemSelected} />}
           </div>
         </div>
       </MuiThemeProvider>
     </CalculatorSection>
   )
 }
-
+//
 export default Calculator
