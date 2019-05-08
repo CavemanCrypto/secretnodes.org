@@ -75,7 +75,7 @@ const calculateDaily = (inputValues, constantValues, days = 1) => {
   const dailyEngEarned = dailyRewards * (inputValues.nodeStake / inputValues.totalGenisisNodeStake)
   const dailyRevenue = dailyEngEarned * inputValues.ENGPrice
   const dailyProfit = dailyRevenue - dailyCost
-  const dailyReturn = (dailyEngEarned / inputValues.nodeStake) - (dailyCost * inputValues.ENGPrice)
+  const dailyReturn = dailyEngEarned / inputValues.nodeStake
 
   return {
     revenue: dailyRevenue * days,
