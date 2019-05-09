@@ -3,7 +3,8 @@ import styled from '@emotion/styled'
 const PageFooter = props => {
   const Footer = styled('footer')({
     '.span-privacy-policy': {
-      color: '#FBFBFD'
+      color: '#FBFBFD',
+      padding: 5
     },
     '.footer-content-wrapper': {
       width: '90%',
