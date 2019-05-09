@@ -130,7 +130,7 @@ export default class Header extends React.Component {
 	        cursor: 'pointer',
 	        background: 'none',
 					color: 'none',
-					marginBottom: 14 
+					marginBottom: 14
 	      },
 	      '#dropdown-menu > li': {
 	        margin: 6
@@ -176,7 +176,7 @@ export default class Header extends React.Component {
         </div>
         </Link>
 	      <div style={{ flexBasis: '100%', visibility: showDropdown,  height: moreShit }} className='dropdown-menu-container'>
-            <img 
+            <img
               onClick={this.dropdownHandler}
               style={{marginRight: this.state.showMenu ? responsiveMenuDisplay : '10px'}}
               src='/static/menu-icon.svg'
@@ -205,6 +205,11 @@ export default class Header extends React.Component {
                       <Link href='#rewards'>
                         <div className='styled-menu'>
                           <li role='menuitem'>Rewards</li>
+                        </div>
+                      </Link>
+                      <Link href='#calculator'>
+                        <div className='styled-menu'>
+                          <li role='menuitem'>Calculator</li>
                         </div>
                       </Link>
                       <Link href='#contributors'>
