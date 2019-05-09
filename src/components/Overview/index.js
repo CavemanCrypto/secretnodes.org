@@ -29,7 +29,7 @@ const OverviewSection = props => {
     <Overview id='secret-nodes'>
       <h1>Overview</h1>
       <TextContainer mediaQueries={props.mediaQueries}>
-Enigma is building a privacy layer for the decentralized web. First researched at MIT, Enigma’s network of “secret nodes” can perform computations over encrypted data at scale without ever exposing the raw data itself. By finally enabling decentralized applications to use private and sensitive data, smart contracts built with Enigma become “secret contracts”, allowing developers to create thousands of new, valuable solutions.
+<a href="https://enigma.co"><font color="#20B1F9">Enigma</font></a> is building a privacy layer for the decentralized web. First researched at MIT, Enigma’s network of “secret nodes” can perform computations over encrypted data at scale without ever exposing the raw data itself. By finally enabling decentralized applications to use private and sensitive data, smart contracts built with Enigma become “<a href="https://blog.enigma.co/defining-secret-contracts-f40ddee67ef2"><font color="#20B1F9">secret contracts</font></a>”, allowing developers to create thousands of new, valuable solutions.
       </TextContainer>
       <TextContainer mediaQueries={props.mediaQueries}>
 <b>Role and Utility of ENG</b>

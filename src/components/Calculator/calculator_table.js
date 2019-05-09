@@ -124,6 +124,17 @@ const CalculatorOutput = props => {
             <TableHeaderColumn width='150' dataField='roi' headerAlign={'center'} tdStyle={ { 'border': 'solid thin', 'padding': '2px'} }>ROI</TableHeaderColumn>
           </BootstrapTable>
     </CalculatorOutputSection>
+    <font size="2" color="#E82E9D">Disclosure:</font> <font size="1.5">Secretnode profit is calculated based on default assumptions editable by the end user. We try our best to keep these default assumptions up to date but they are merely estimations based on publicly available information on the economics provided by the enigma team.</font>
+    <dl>
+        <font size="2.5" color="#20B1F9"><dt>Total genesis Node Stake</dt></font>
+        <font size="2"><dd>This should be set to the combined total ENG stake across all nodes.</dd></font>
+        <font size="2.5" color="#20B1F9"><dt>Node Stake</dt></font>
+        <font size="2"><dd>This is the amount of ENG you plan to stake in a secretnode.</dd></font>
+        <font size="2.5" color="#20B1F9"><dt>Yearly Node Cost</dt></font>
+        <font size="2"><dd>This is the yearly cost of electricity or fees for running a node.</dd></font>
+        <font size="2.5" color="#20B1F9"><dt>ENG Price</dt></font>
+        <font size="2"><dd>This is the market value of a single ENG token.</dd></font>
+    </dl>
     </div>
     )
 }
