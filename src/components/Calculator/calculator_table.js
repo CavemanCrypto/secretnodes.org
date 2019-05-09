@@ -112,16 +112,6 @@ const CalculatorOutput = props => {
 
   return (
     <div>
-    <dl>
-        <font size="2.5" color="#20B1F9"><dt>Total genesis Node Stake</dt></font>
-        <font size="2"><dd>This should be set to the combined total ENG stake across all nodes.</dd></font>
-        <font size="2.5" color="#20B1F9"><dt>Node Stake</dt></font>
-        <font size="2"><dd>This is the amount of ENG you plan to stake in a secretnode.</dd></font>
-        <font size="2.5" color="#20B1F9"><dt>Yearly Node Cost</dt></font>
-        <font size="2"><dd>This is the yearly cost of electricity or fees for running a node.</dd></font>
-        <font size="2.5" color="#20B1F9"><dt>ENG Price</dt></font>
-        <font size="2"><dd>This is the market value of a single ENG token.</dd></font>
-    </dl>
     <CalculatorOutputSection>
           <BootstrapTable data= { data } options={ options }
           tableStyle={ { border: 'solid thin' }  }
@@ -134,8 +124,17 @@ const CalculatorOutput = props => {
             <TableHeaderColumn width='150' dataField='roi' headerAlign={'center'} tdStyle={ { 'border': 'solid thin', 'padding': '2px'} }>ROI</TableHeaderColumn>
           </BootstrapTable>
     </CalculatorOutputSection>
+    {/*<dl>
+        <font size="2.5" color="#20B1F9"><dt>Total genesis Node Stake</dt></font>
+        <font size="2"><dd>This should be set to the combined total ENG stake across all nodes.</dd></font>
+        <font size="2.5" color="#20B1F9"><dt>Node Stake</dt></font>
+        <font size="2"><dd>This is the amount of ENG you plan to stake in a secretnode.</dd></font>
+        <font size="2.5" color="#20B1F9"><dt>Yearly Node Cost</dt></font>
+        <font size="2"><dd>This is the yearly cost of electricity or fees for running a node.</dd></font>
+        <font size="2.5" color="#20B1F9"><dt>ENG Price</dt></font>
+        <font size="2"><dd>This is the market value of a single ENG token.</dd></font>
+    </dl>*/}
         <font size="2" color="#E82E9D">Disclosure:</font> <font size="1.75">We make no warranties of any kind in relation to this content, including but not limited to accuracy and updatedness. No part of the content that we provide constitutes financial advice, legal advice or any other form of advice meant for your specific reliance for any purpose. Any use or reliance on our content is solely at your own risk and discretion. You should conduct your own research, review, analyse and verify our content before relying on it. No content on our site is meant to be a solicitation or offer of any kind.</font>
-
     </div>
     )
 }
