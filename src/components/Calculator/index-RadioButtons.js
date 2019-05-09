@@ -33,15 +33,12 @@ const CalculatorSection = styled('section')({
     marginLeft: 20
   },
   '.calculator-container': {
-      display: 'block',
-      alignItems: 'center',
-      flexWrap: 'wrap',
-      padding: '0 40px',
-      justifyContent: 'center',
-      maxWidth: '1200px',
-      width: '100%',
-      margin: '0 auto'
-    },
+    display: 'block',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    padding: '0 40px',
+    justifyContent: 'center'
+  },
   letterSpacing: '.6px',
   height: 'auto',
   width: '100%',
@@ -92,16 +89,16 @@ const Calculator = props => {
   }
 
   const [inputs, setInputs] = useState({
-    totalGenesisNodeStake: 250000 * 50,
+    totalGenisisNodeStake: 250000 * 50,
     nodeStake: 50000.0,
     yearlyNodeCost: 840.0,
     ENGPrice: 0.60
   })
 
-  const keyList = [ 'totalGenesisNodeStake', 'nodeStake', 'yearlyNodeCost', 'ENGPrice'  ]
+  const keyList = [ 'totalGenisisNodeStake', 'nodeStake', 'yearlyNodeCost', 'ENGPrice'  ]
 
   const formatValue = {
-    totalGenesisNodeStake: false,
+    totalGenisisNodeStake: false,
     nodeStake: false,
     ENGPrice: false,
     yearlyNodeCost: false
@@ -110,7 +107,7 @@ const Calculator = props => {
   //console.dir(inputs)
 
   const maxInputValues = {
-    totalGenesisNodeStake: 150000000.0,
+    totalGenisisNodeStake: 150000000.0,
     totalStakedPercent: 100.0,
     nodeStake: 500000.0,
     ENGPrice: 10.0,
@@ -118,7 +115,7 @@ const Calculator = props => {
   }
 
   const minInputValues = {
-    totalGenesisNodeStake: 0,
+    totalGenisisNodeStake: 0,
     totalStakedPercent: 0,
     nodeStake: 0,
     ENGPrice: 0,
@@ -126,7 +123,7 @@ const Calculator = props => {
   }
 
   const stepValues = {
-    totalGenesisNodeStake: 1000,
+    totalGenisisNodeStake: 1000,
     nodeStake: 100,
     ENGPrice: .01,
     yearlyNodeCost: 1

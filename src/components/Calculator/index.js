@@ -26,15 +26,12 @@ const CalculatorSection = styled('section')({
     marginLeft: 20
   },
   '.calculator-container': {
-      display: 'block',
-      alignItems: 'center',
-      flexWrap: 'wrap',
-      padding: '0 40px',
-      justifyContent: 'center',
-      maxWidth: '1200px',
-      width: '100%',
-      margin: '0 auto'
-    },
+    display: 'block',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    padding: '0 30px',
+    justifyContent: 'center'
+  },
   letterSpacing: '.6px',
   height: 'auto',
   width: '100%',
@@ -161,7 +158,7 @@ class CurrencyMenu extends React.Component {
 const Calculator = props => {
 
   const keyList = [
-    'totalGenesisNodeStake',
+    'totalGenisisNodeStake',
     'nodeStake',
     'yearlyNodeCost',
     'ENGPrice' ]
@@ -173,21 +170,21 @@ const Calculator = props => {
   }
 
   const [inputs, setInputs] = useState({
-    totalGenesisNodeStake: 10000000,
+    totalGenisisNodeStake: 10000000,
     nodeStake: 50000.0,
     yearlyNodeCost: 600.0,
     ENGPrice: 0.60
   })
 
   const formatValue = {
-    totalGenesisNodeStake: false,
+    totalGenisisNodeStake: false,
     nodeStake: false,
     ENGPrice: false,
     yearlyNodeCost: false
   }
 
   const maxInputValues = {
-    totalGenesisNodeStake: 75000000,
+    totalGenisisNodeStake: 75000000,
     totalStakedPercent: 100.0,
     nodeStake: 500000.0,
     ENGPrice: 10.0,
@@ -195,7 +192,7 @@ const Calculator = props => {
   }
 
   const minInputValues = {
-    totalGenesisNodeStake: 1250000,
+    totalGenisisNodeStake: 1250000,
     totalStakedPercent: 0,
     nodeStake: 0,
     ENGPrice: 0,
@@ -203,7 +200,7 @@ const Calculator = props => {
   }
 
   const stepValues = {
-    totalGenesisNodeStake: 1000,
+    totalGenisisNodeStake: 1000,
     nodeStake: 100,
     ENGPrice: .01,
     yearlyNodeCost: 1
