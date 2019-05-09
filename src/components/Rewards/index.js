@@ -19,7 +19,7 @@ const RewardsSection = props => {
     },
     [props.mediaQueries[1]]: {
       flexDirection: 'column',
-      padding: 2.5,
+      padding: 5,
       alignItems: 'center'
     }
   })
@@ -40,7 +40,7 @@ const RewardsSection = props => {
       </TextContainer>
       <TextContainer mediaQueries={props.mediaQueries}>
       <font color="#20B1F9"><b>How are genesis nodes selected? </b></font>
-       For the purposes of decentralizing Enigma, genesis nodes must be selected in as fair and permissionless a manner as possible. It is also in the best interest of the network to launch with a group of nodes that have demonstrated an honest commitment to upholding the network (uptime, security, etc). Thus the substantial majority of genesis nodes are being selected solely based on their testnet activity — a period referred to as the Genesis Games.
+       For the purposes of decentralizing Enigma, genesis nodes must be selected in as fair and permissionless a manner as possible. It is also in the best interest of the network to launch with a group of nodes that have demonstrated an honest commitment to upholding the network (uptime, security, etc). Thus the substantial majority of genesis nodes are being selected solely based on their testnet activity — a period referred to as the Genesis Game.
        <ul>
        <li>The top 30 nodes by genesis score are selected as genesis nodes.</li>
        <li>More nodes (up to 10 maximum) will be eligible for whitelisting based on contributions to the Enigma ecosystem, primarily those building supply-side tooling for workers and staking operations.</li>
