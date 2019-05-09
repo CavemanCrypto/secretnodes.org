@@ -37,8 +37,6 @@ const RewardsSection = props => {
          <li>After the snapshot is taken, we will distribute testnet ENG. As mentioned above, after deploying Discovery on testnet you will then be able to set up and begin operating a secret node.</li>
          <li>After a short setup period following testnet deployment, the Genesis Game will begin. As described earlier, genesis nodes will then be selected based on uptime and testnet token staking.</li>
        </ul>
-       <font color="#20B1F9"><b>When can I run a node if I don't get selected through the Genesis games? </b></font>
-       <em><b>After a future anticipated hard fork, any node that meets the minimum staking requirement and hardware requirements will be allowed to join the network.</b></em> By limiting the network to genesis nodes until after the hard fork occurs, Enigma provides an exclusive period for genesis node operators who supported the network during its testnet phase while helping to ensure there are no disruptions from an early fork. But by then opening up the network to all participants, we preserve the permissionless nature of Enigma and expand the network rapidly once its operations have been secured.
       </TextContainer>
       <TextContainer mediaQueries={props.mediaQueries}>
       <font color="#20B1F9"><b>How are genesis nodes selected? </b></font>
