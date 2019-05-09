@@ -20,7 +20,7 @@ const Contributors = props => {
     letterSpacing: '.6px',
     height: 'auto',
     width: '100%',
-    background: '#060b47',
+    //background: '#060b47',
     color: '#fbfbfd',
     minHeight: 300,
     [props.mediaQueries[1]]: {
