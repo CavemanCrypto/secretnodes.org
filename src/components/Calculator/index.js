@@ -7,15 +7,15 @@ import CalculatorInput from './calculator_input'
 import CalculatorOutput from './calculator_table'
 
 // Drop down menu widget:
-import IconButton from '@material-ui/core/IconButton';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { withStyles } from '@material-ui/core/styles';
+//import IconButton from '@material-ui/core/IconButton';
+//import Menu from '@material-ui/core/Menu';
+//import MenuItem from '@material-ui/core/MenuItem';
+//import MoreVertIcon from '@material-ui/icons/MoreVert';
+//import { withStyles } from '@material-ui/core/styles';
 
 // Currency methods:
-import getSymbolFromCurrency from 'currency-symbol-map'
-import currencySymbolMap from 'currency-symbol-map'
+//import getSymbolFromCurrency from 'currency-symbol-map'
+//import currencySymbolMap from 'currency-symbol-map'
 
 const CalculatorSection = styled('section')({
   h1: {
@@ -158,7 +158,7 @@ class CurrencyMenu extends React.Component {
 const Calculator = props => {
 
   const keyList = [
-    'totalGenisisNodeStake',
+    'totalGenesisNodeStake',
     'nodeStake',
     'yearlyNodeCost',
     'ENGPrice' ]
@@ -170,21 +170,21 @@ const Calculator = props => {
   }
 
   const [inputs, setInputs] = useState({
-    totalGenisisNodeStake: 10000000,
+    totalGenesisNodeStake: 10000000,
     nodeStake: 50000.0,
     yearlyNodeCost: 600.0,
     ENGPrice: 0.60
   })
 
   const formatValue = {
-    totalGenisisNodeStake: false,
+    totalGenesisNodeStake: false,
     nodeStake: false,
     ENGPrice: false,
     yearlyNodeCost: false
   }
 
   const maxInputValues = {
-    totalGenisisNodeStake: 75000000,
+    totalGenesisNodeStake: 75000000,
     totalStakedPercent: 100.0,
     nodeStake: 500000.0,
     ENGPrice: 10.0,
@@ -192,7 +192,7 @@ const Calculator = props => {
   }
 
   const minInputValues = {
-    totalGenisisNodeStake: 1250000,
+    totalGenesisNodeStake: 1250000,
     totalStakedPercent: 0,
     nodeStake: 0,
     ENGPrice: 0,
@@ -200,7 +200,7 @@ const Calculator = props => {
   }
 
   const stepValues = {
-    totalGenisisNodeStake: 1000,
+    totalGenesisNodeStake: 1000,
     nodeStake: 100,
     ENGPrice: .01,
     yearlyNodeCost: 1

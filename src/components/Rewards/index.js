@@ -28,7 +28,13 @@ const RewardsSection = props => {
     <Rewards id='rewards'>
       <h1>Rewards</h1>
       <TextContainer mediaQueries={props.mediaQueries}>
-        Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Dignissim suspendisse in est ante in nibh mauris cursus mattis. Fusce id velit ut tortor pretium viverra suspendisse potenti. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. Ac feugiat sed lectus vestibulum mattis. Adipiscing tristique risus nec feugiat in fermentum posuere urna. Nibh praesent tristique magna sit amet purus gravida quis. Ullamcorper sit amet risus nullam eget felis eget nunc. Faucibus a pellentesque sit amet porttitor eget dolor morbi. Ut tristique et egestas quis. In tellus integer feugiat scelerisque varius. Ac placerat vestibulum lectus mauris ultrices. Enim lobortis scelerisque fermentum dui faucibus. Fermentum leo vel orci porta non pulvinar neque laoreet. Sed velit dignissim sodales ut. Diam quam nulla porttitor massa id neque aliquam vestibulum. Tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum. In nibh mauris cursus mattis molestie a iaculis at. Donec et odio pellentesque diam volutpat.
+<font color="#20B1F9"><b>Introduction to the Genesis Games </b></font>
+ In the early “bootstrapping” stages of a network, it is important to grow in a decentralized, but still manageable way. Early days of the Enigma network will require hard forks and changes, and being able to effectively coordinate and communicate will be critical. We reiterate: this is in the service of creating a robust, sustainable network that becomes and remains more decentralized, useful, and valuable over the long term. And like any mission to where no one has gone before a secure and successful launch is the most critical part. Therefore, the number of secret nodes available when Discovery is deployed on mainnet will be limited to 50 “genesis nodes”— a number that based on in depth research and modeling meaningfully decentralizes the network while maintaining its early stability. The next steps for node runners is thus as follows:
+ <ul>
+ <li>The top 30 nodes by genesis score are selected as genesis nodes.</li>
+ <li>More nodes (up to 10 maximum) will be eligible for whitelisting based on contributions to the Enigma ecosystem, primarily those building supply-side tooling for workers and staking operations.</li>
+ <li>Dependent on the size of this whitelist, 10–20 more nodes are chosen based on a lottery system, with weighting in the lottery determined by your genesis score. This means that even if you do not finish in the top 30 by genesis score, you are still eligible for random selection as a genesis node. This will help encourage broader participation in testing the Discovery network.</li>
+ </ul>
       </TextContainer>
     </Rewards>
   )

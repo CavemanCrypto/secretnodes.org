@@ -91,7 +91,7 @@ export default class Header extends React.Component {
             <a href='#rewards'><li role='link'>Rewards</li></a>
             <a href='#calculator'><li role='link'>Calculator</li></a>
             {/*<a href='#contributors'><li role='link'>Contributors</li></a>*/}
-            <Link href='/privacy-policy'><li role='link'>Privacy Policy</li></Link>
+            {/*<Link href='/privacy-policy'><li role='link'>Privacy Policy</li></Link>*/}
             <li className='twitter-icon-container'>
               <a href='https://twitter.com/secretnodes'>
                 <img
