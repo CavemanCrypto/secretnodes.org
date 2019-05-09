@@ -75,7 +75,7 @@ const PageFooter = props => {
           <span className='secret-nodes-motto'>2018 - 2019</span>
         </div>
         <span className='special-span'><a href='mailto:ian@secretforerunners.com?Subject=Hello'>Forerun by Secret Forerunners</a></span>
-        <span className='special-span'><a href=''/privacy-policy'>Privacy Policy</a></span>
+        <span className='special-span'><a href='/privacy-policy'>Privacy Policy</a></span>
       </div>
     </Footer>
   )
