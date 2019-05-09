@@ -60,7 +60,7 @@ const Intro = props => {
       }
     },
     [props.mediaQueries[0]]: {
-      height: '55vh',
+      height: '65vh',
       padding: 20,
       textAlign: 'center',
       '.button-container': {
