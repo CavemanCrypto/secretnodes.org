@@ -89,16 +89,16 @@ const Calculator = props => {
   }
 
   const [inputs, setInputs] = useState({
-    totalGenisisNodeStake: 250000 * 50,
+    totalGenesisNodeStake: 250000 * 50,
     nodeStake: 50000.0,
     yearlyNodeCost: 840.0,
     ENGPrice: 0.60
   })
 
-  const keyList = [ 'totalGenisisNodeStake', 'nodeStake', 'yearlyNodeCost', 'ENGPrice'  ]
+  const keyList = [ 'totalGenesisNodeStake', 'nodeStake', 'yearlyNodeCost', 'ENGPrice'  ]
 
   const formatValue = {
-    totalGenisisNodeStake: false,
+    totalGenesisNodeStake: false,
     nodeStake: false,
     ENGPrice: false,
     yearlyNodeCost: false
@@ -107,7 +107,7 @@ const Calculator = props => {
   //console.dir(inputs)
 
   const maxInputValues = {
-    totalGenisisNodeStake: 150000000.0,
+    totalGenesisNodeStake: 150000000.0,
     totalStakedPercent: 100.0,
     nodeStake: 500000.0,
     ENGPrice: 10.0,
@@ -115,7 +115,7 @@ const Calculator = props => {
   }
 
   const minInputValues = {
-    totalGenisisNodeStake: 0,
+    totalGenesisNodeStake: 0,
     totalStakedPercent: 0,
     nodeStake: 0,
     ENGPrice: 0,
@@ -123,7 +123,7 @@ const Calculator = props => {
   }
 
   const stepValues = {
-    totalGenisisNodeStake: 1000,
+    totalGenesisNodeStake: 1000,
     nodeStake: 100,
     ENGPrice: .01,
     yearlyNodeCost: 1
