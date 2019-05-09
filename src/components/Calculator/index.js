@@ -7,15 +7,15 @@ import CalculatorInput from './calculator_input'
 import CalculatorOutput from './calculator_table'
 
 // Drop down menu widget:
-import IconButton from '@material-ui/core/IconButton';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { withStyles } from '@material-ui/core/styles';
+//import IconButton from '@material-ui/core/IconButton';
+//import Menu from '@material-ui/core/Menu';
+//import MenuItem from '@material-ui/core/MenuItem';
+//import MoreVertIcon from '@material-ui/icons/MoreVert';
+//import { withStyles } from '@material-ui/core/styles';
 
 // Currency methods:
-import getSymbolFromCurrency from 'currency-symbol-map'
-import currencySymbolMap from 'currency-symbol-map'
+//import getSymbolFromCurrency from 'currency-symbol-map'
+//import currencySymbolMap from 'currency-symbol-map'
 
 const CalculatorSection = styled('section')({
   h1: {

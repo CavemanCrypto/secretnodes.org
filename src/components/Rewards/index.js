@@ -4,7 +4,7 @@ import { TextContainer } from '../styled'
 const RewardsSection = props => {
   const Rewards = styled('section')({
     height: 'auto',
-    maxWidth: '90vw',
+    maxWidth: '100vw',
     color: '#FFF',
     display: 'flex',
     justifyContent: 'center',
@@ -46,6 +46,8 @@ const RewardsSection = props => {
        <li>More nodes (up to 10 maximum) will be eligible for whitelisting based on contributions to the Enigma ecosystem, primarily those building supply-side tooling for workers and staking operations.</li>
        <li>Dependent on the size of this whitelist, 10–20 more nodes are chosen based on a lottery system, with weighting in the lottery determined by your genesis score. This means that even if you do not finish in the top 30 by genesis score, you are still eligible for random selection as a genesis node. This will help encourage broader participation in testing the Discovery network.</li>
        </ul>
+       <font color="#20B1F9"><b>When can I run a node if I don't get selected through the Genesis games? </b></font>
+       <em><b>After a future anticipated hard fork, any node that meets the minimum staking requirement and hardware requirements will be allowed to join the network.</b></em> By limiting the network to genesis nodes until after the hard fork occurs, Enigma provides an exclusive period for genesis node operators who supported the network during its testnet phase while helping to ensure there are no disruptions from an early fork. But by then opening up the network to all participants, we preserve the permissionless nature of Enigma and expand the network rapidly once its operations have been secured.
       <font color="#20B1F9"><b> How do Block Rewards work?</b></font> Block rewards for the Enigma network will begin at 750,000 ENG for the first year the mainnet is in operation and decrease 10% year-over-year thereafter. The total block rewards pool is thus 7.5M ENG and will not be exhausted for the first century the network is in operation. This pool is 1/5th of the total token pool reserved for network, community, and ecosystem incentives (37.5M ENG).
       </TextContainer>
     </Rewards>
