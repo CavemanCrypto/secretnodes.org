@@ -36,6 +36,12 @@ const RewardsSection = props => {
  <li>Dependent on the size of this whitelist, 10–20 more nodes are chosen based on a lottery system, with weighting in the lottery determined by your genesis score. This means that even if you do not finish in the top 30 by genesis score, you are still eligible for random selection as a genesis node. This will help encourage broader participation in testing the Discovery network.</li>
  </ul>
       </TextContainer>
+  
+      <TextContainer mediaQueries={props.mediaQueries}>
+  <font color="#20B1F9"><b>Block Rewards</b></font>
+  In return for operating a secret node and staking on Enigma, node operators receive a share of fees paid on the network as well as block rewards.
+Block rewards for the Enigma network will begin at 750,000 ENG for the first year the mainnet is in operation and decrease 10% year-over-year thereafter. The total block rewards pool is thus 7.5M ENG and will not be exhausted for the first century the network is in operation. This pool is 1/5th of the total token pool reserved for network, community, and ecosystem incentives (37.5M ENG). We visualize this below:
+      </TextContainer>
     </Rewards>
   )
 }
