@@ -87,9 +87,9 @@ export default class Header extends React.Component {
         </Link>
         <nav>
           <ul id='regular-menu'>
-            <a href='#secret-nodes'><li role='link'>Secret Nodes</li></a>
-            <a href='#rewards'><li role='link'>Rewards</li></a>
-            <a href='#calculator'><li role='link'>Calculator</li></a>
+            <a href='https://www.secretnodes.org/#secret-nodes'><li role='link'>Secret Nodes</li></a>
+            <a href='https://www.secretnodes.org/#rewards'><li role='link'>Rewards</li></a>
+            <a href='https://www.secretnodes.org/#calculator'><li role='link'>Calculator</li></a>
             {/*<a href='#contributors'><li role='link'>Contributors</li></a>*/}
             {/*<Link href='/privacy-policy'><li role='link'>Privacy Policy</li></Link>*/}
             <li className='twitter-icon-container'>
