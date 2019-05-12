@@ -37,7 +37,7 @@ The ENG token is critical to the function of the Enigma network, playing two pri
       </TextContainer>
       <TextContainer mediaQueries={props.mediaQueries}>
 <font color="#20B1F9"><b>What is the minimum ENG stake required for Enigma?</b></font>
-<a href="https://blog.enigma.co/secret-nodes-part-2-exploring-eng-economics-and-building-a-sustainable-network-3d0e9f8a9d40" target="_blank"<font color="#E82E9D"> As discussed by enigma here</font></a>, and now finalized, the minimum ENG stake required for a mainnet secret node is 25,000 ENG. This number was selected based on a study of many other networks, internal modeling based on the current distribution of ENG, and balancing a desire for decentralization with network sustainability and having meaningful stakes for node operators. This minimum threshold will however be reduced over the life of the network.
+<a href="https://blog.enigma.co/secret-nodes-part-2-exploring-eng-economics-and-building-a-sustainable-network-3d0e9f8a9d40" target="_blank"><font color="#E82E9D"> As discussed by enigma here</font></a>, and now finalized, the minimum ENG stake required for a mainnet secret node is 25,000 ENG. This number was selected based on a study of many other networks, internal modeling based on the current distribution of ENG, and balancing a desire for decentralization with network sustainability and having meaningful stakes for node operators. This minimum threshold will however be reduced over the life of the network.
       </TextContainer>
       <TextContainer mediaQueries={props.mediaQueries}>
       <font color="#20B1F9"><b>What are the System Requirements to run a node? </b></font>
