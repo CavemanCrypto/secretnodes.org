@@ -37,8 +37,8 @@ const Contributors = props => {
     <ContributorsSection id='contributors'>
       <h1>Contributors</h1>
       <div className='contributors-container'>
-        <AvatarContainer alt='' src='/static/ian.png' name='Ian' role='Founder | Node Magician' mediaQueries={props.mediaQueries} />
-        <AvatarContainer alt='' src='/static/brendan.jpg' name='Brendan' role='Co-Founder | COO' mediaQueries={props.mediaQueries} />
+        <AvatarContainer alt='' src='/static/ian.png' name='Ian' role='Node Magician' mediaQueries={props.mediaQueries} />
+        <AvatarContainer alt='' src='/static/brendan.jpg' name='Brendan' role='Co-Organizer' mediaQueries={props.mediaQueries} />
         <AvatarContainer alt='' src='/static/krista.png' name='Krista' role='Front End Contributor' mediaQueries={props.mediaQueries} />
         <AvatarContainer alt='' src='/static/irongiant.jpg' name='Iron Giant' role='Calculator Contributor' mediaQueries={props.mediaQueries} />
       </div>
