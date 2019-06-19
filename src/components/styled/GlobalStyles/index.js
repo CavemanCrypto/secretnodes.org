@@ -11,7 +11,9 @@ export default () => {
         background-color: #065198;
         background-image: url('static/background_pattern.png');
         background-size: 900px;
+        overflow-x: hidden;
       }
     `}</style>
+    //overflow-x: hidden; - Temporary override on the horizontal overflow due to Calculator.
   )
 }
