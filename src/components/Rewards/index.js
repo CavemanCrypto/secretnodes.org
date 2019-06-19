@@ -35,7 +35,7 @@ const RewardsSection = props => {
  <li>More nodes (up to 10 maximum) will be eligible for whitelisting based on contributions to the Enigma ecosystem, primarily those building supply-side tooling for workers and staking operations.</li>
  <li>Dependent on the size of this whitelist, 10–20 more nodes are chosen based on a lottery system, with weighting in the lottery determined by your genesis score. This means that even if you do not finish in the top 30 by genesis score, you are still eligible for random selection as a genesis node. This will help encourage broader participation in testing the Discovery network.</li>
  </ul>
-<font color="#20B1F9"><b>As mentioned, there will be 50 genesis secret nodes in total when mainnet launches. These nodes will be the only nodes eligible to operate when Discovery launches, and they alone will receive block rewards and network fees until more nodes are added to the network.</b></font>
+As mentioned, there will be 50 genesis secret nodes in total when mainnet launches. These nodes will be the only nodes eligible to operate when Discovery launches, and they alone will receive block rewards and network fees until more nodes are added to the network.
     </TextContainer>
     </Rewards>
   )
