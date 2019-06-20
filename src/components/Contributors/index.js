@@ -41,6 +41,7 @@ const Contributors = props => {
         <AvatarContainer alt='' src='/static/brendan.jpg' name='Brendan' role='Co-Organizer' mediaQueries={props.mediaQueries} />
         <AvatarContainer alt='' src='/static/krista.png' name='Krista' role='Front End Contributor' mediaQueries={props.mediaQueries} />
         <AvatarContainer alt='' src='/static/irongiant.jpg' name='Iron Giant' role='Calculator Contributor' mediaQueries={props.mediaQueries} />
+        <AvatarContainer alt='' src='/static/m.jpg' name='Mohammed Patla' role='Community Code Contributor' mediaQueries={props.mediaQueries} />
       </div>
     </ContributorsSection>
   )
