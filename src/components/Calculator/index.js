@@ -166,7 +166,7 @@ const Calculator = props => {
   const constantValues = {
     engCirculatingSupply: 75000000.0,
     totalStakedPercent: 3.33,
-    yearlyRewards: 62500.0 * 12
+    yearlyRewards: 125000.0 * 12
   }
 
   const [inputs, setInputs] = useState({
